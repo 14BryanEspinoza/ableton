@@ -121,12 +121,12 @@ a {
 /* Dos Imágenes */
 .contenedor {
   position: relative;
-  display: flex;
+  display: inline-block;
 }
 
 .contenedor .img1 {
   position: absolute;
-  top: 150px;
+  top: 550px;
   right: 150px;
   width: 500px;
   height: 500px;
@@ -148,4 +148,128 @@ a {
 
 .contenedor .img2 img {
   width: 60%;
+}
+
+/* Primer Video */
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video .video1 img {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.video .video1 p {
+  margin: 5px 20px;
+  font-size: 0.8rem;
+}
+
+/* Tres Imágenes */
+.tresImágenes .img1 {
+  left: 150px;
+}
+
+.tresImágenes .img2 {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.tresImágenes .img2 img {
+  display: block;
+  object-fit: cover;
+  width: 40%;
+  height: 40%;
+  margin: 10px auto;
+}
+
+/* Una Imagen */
+.unaImagen {
+  position: relative;
+}
+
+.unaImagen .img {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.unaImagen .img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Dos Imágenes Centradas */
+.dosImágenesCentradas .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #060efe82;
+}
+
+.dosImágenesCentradas .img1 {
+  position: absolute;
+  left: 150px;
+}
+
+.dosImágenesCentradas .img2 {
+  position: absolute;
+  right: 150px;
+}
+
+.dosImágenesCentradas .img1 img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.dosImágenesCentradas .img2 img {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+}
+
+/* Dos Paneles */
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 400px;
+  gap: 10px;
+  margin: 0 auto;
+  background-color: #060efe82;
+}
+
+.panel img {
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+}
+
+.panel-texto {
+  width: 50%;
+  margin: 0 20px;
+}
+
+.panel-texto h3 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+.panel-texto a {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #a8f709;
 }
