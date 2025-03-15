@@ -273,3 +273,98 @@ a {
   line-height: 30px;
   color: #a8f709;
 }
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 100px;
+  margin: 100px auto;
+  padding: 100px;
+  border-top: 1px solid #ccc;
+}
+
+.footer .titulo {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+.footer .footerSup {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.footer .footerSup .enlaces1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer .footerSup .enlaces1 li,
+.footer .footerSup .enlaces2 li,
+.footer .footerSup .enlaces3 li {
+  margin: 10px 0px;
+  font-size: 1rem;
+}
+
+.footer .footerSup .enlaces2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer .footerSup .enlaces1 h3,
+.footer .footerSup .enlaces2 h3,
+.footer .footerSup .enlaces3 h3 {
+  margin: 10px 0px;
+  font-size: 1.3rem;
+}
+
+.footer .footerSup .enlaces3 {
+  width: 40%;
+}
+
+.footer .footerSup .enlaces3 p {
+  width: 70%;
+  margin: 10px 0px;
+  font-size: 1.2rem;
+}
+
+.footer .footerSup .enlaces3 input {
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.footer .footerSup .enlaces3 button {
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+.footer .footerInf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.footer .footerInf .enlaces ul {
+  display: flex;
+  gap: 10px;
+  line-height: 40px;
+}
+
+.footer .footerInf .enlaces ul li a {
+  font-size: 0.8rem;
+}
+
+.footer .footerInf .copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+}
