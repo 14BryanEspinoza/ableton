@@ -1,238 +1,260 @@
 <!DOCTYPE html>
-<!-- Etiqueta de Idioma -->
 <html lang="es">
 
 <head>
-  <!-- Etiqueta de Metadatos -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Styles -->
+  <meta name="description" content="Ableton - Desarrollamos software y hardware únicos para la creación e interpretación musical. Live, Push, Note, Move y Link." />
+  <meta name="keywords" content="Ableton, música, producción musical, software, hardware, Live, Push, DAW" />
+  <meta name="author" content="Bryan14Saenz" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Ableton - Práctica Frontend" />
+  <meta property="og:description" content="Desarrollamos software y hardware únicos para la creación e interpretación musical." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
   <link rel="stylesheet" href="Css/style.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="" />
-  <!-- Título -->
-  <title>Fronted Practice - Ableton</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>" />
+
+  <title>Ableton - Práctica Frontend</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <input type="checkbox" id="check">
-  <label for="check">&#9776</label>
-  <nav class="navbar">
-    <div class="navbar-izq">
-      <div class="navbar-logo">
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEvt1DtKBFEQheFv9qCoqfhag4ruQjAWREwFtyEGYiBMILgQH7gGRTH2hWtwSnqkvfbtOww2JtPh7erz3zp1uno6fnod65sAig7/u0Wz2MZR5qqHOMdzrpW2DkL8CovYxVkiso8TPGAjB8kBQvwaC3jCKl4SwAxuBx3M47GqeUs7aQJMVx+G+D02G8SHOnXIXdXJD0gKCPGwZaUSX8d7ISoBucQyfkHqgHHEh+wp3NQga/iIl10BYuhfVv2FRentv8WbAHGWDrltDq3+5wBxXo9pLknFBLUBhpBIxxJ20E/StIfTKjkR5demtJV20Ry2cJyJ6sHgT78Yd1UUN+UoBaUORtForZkAihZ2btEn8INAGYXPQFUAAAAASUVORK5CYII="
-          alt="Ableton" />
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <input type="checkbox" id="menu-toggle" aria-hidden="true">
+  <label for="menu-toggle" aria-label="Abrir menú de navegación"></label>
+
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="navbar-izq">
+        <div class="navbar-logo">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEvt1DtKBFEQheFv9qCoqfhag4ruQjAWREwFtyEGYiBMILgQH7gGRTH2hWtwSnqkvfbtOww2JtPh7erz3zp1uno6fnod65sAig7/u0Wz2MZR5qqHOMdzrpW2DkL8CovYxVkiso8TPGAjB8kBQvwaC3jCKl4SwAxuBx3M47GqeUs7aQJMVx+G+D02G8SHOnXIXdXJD0gKCPGwZaUSX8d7ISoBucQyfkHqgHHEh+wp3NQga/iIl10BYuhfVv2FRentv8WbAHGWDrltDq3+5wBxXo9pLknFBLUBhpBIxxJ20E/StIfTKjkR5demtJV20Ry2cJyJ6sHgT78Yd1UUN+UoBaUORtForZkAihZ2btEn8INAGYXPQFUAAAAASUVORK5CYII=" alt="Logo de Ableton" width="40" height="40">
+        </div>
+        <ul class="navbar-menu">
+          <li><a href="#">Live</a></li>
+          <li><a href="#">Push</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Pack</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">More +</a></li>
+        </ul>
       </div>
-      <ul class="navbar-menu">
-        <li><a href="#">Live</a></li>
-        <li><a href="#">Push</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Pack</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">More +</a></li>
-      </ul>
-    </div>
-    <div class="navbar-der">
-      <ul>
-        <li><a href="#">Try Live for Free</a></li>
-        <li>
-          <button class="btn">Account</button>
-        </li>
-        <li>
-          <button class="btn">Log out</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- Inicio -->
-  <section class="inicio">
-    <div class="inicio-enlaces">
-      <a href="#">About</a>
-      <a href="#">Jobs</a>
-    </div>
-    <img src="Img/dev.png" alt="desarrolladores" />
-  </section>
-  <!-- Dos Imágenes -->
-  <div class="contenedor dosImágenes">
-    <div class="inicio-texto">
-      <h3>
-        Desarrollamos Live , Push , Note , Move y Link : software y hardware
-        únicos para la creación e interpretación musical. Con estos productos,
-        nuestra comunidad de usuarios crea cosas increíbles.
-      </h3>
-      <p>
-        Ableton se fundó en 1999 y lanzó la primera versión de Live en 2001.
-        Nuestros productos son utilizados por una comunidad de músicos
-        dedicados, diseñadores de sonido y artistas de todo el mundo.
-      </p>
-    </div>
-    <div class="img1">
-      <img src="Img/Desarrollador.png" alt="desarrollador" />
-    </div>
-    <div class="img2">
-      <img src="Img/Joker.png" alt="joker" />
-    </div>
-  </div>
-  <!-- Primer Video -->
-  <div class="contenedor video">
-    <div class="inicio-texto">
-      <h3>
-        Hacer música no es fácil. Requiere tiempo, esfuerzo y aprendizaje.
-        Pero cuando te dejas llevar, es increíblemente gratificante.
-      </h3>
-      <p>
-        Sentimos lo mismo al crear productos Ableton. El motor de Ableton es
-        nuestra pasión por lo que hacemos y por las personas para quienes lo
-        hacemos.
-      </p>
-    </div>
-    <div class="video1">
-      <img src="Img/Video1.jpg" alt="Video 1" />
-      <p>Por Que Ableton? - HyperLapse</p>
-    </div>
-  </div>
-  <!-- Tres Imágenes -->
-  <div class="contenedor tresImágenes">
-    <div class="inicio-texto">
-      <h3>
-        Somos más de 350 personas de 30 países diferentes repartidas entre
-        nuestra sede en Berlin y nuestras oficinas en Los Ángeles y Tokio.
-      </h3>
-      <p></p>
-      <p>
-        La mayoría de nosotros somos músicos, productores y DJs activos, y
-        muchos usamos Live y Push a diario. Provenimos de una amplia gama de
-        trasfondos culturales y profesionales. Algunos tenemos doctorados,
-        otros somos autodidactas, y la mayoría nos encontramos en un punto
-        intermedio. Lo que nos une es la convicción compartida de que cada uno
-        de nosotros tiene las habilidades y los conocimientos para contribuir
-        a algo grande: ayudar a moldear el futuro de la cultura musical.
-      </p>
-    </div>
-    <div class="img1">
-      <img src="Img/Desarrollador.png" alt="desarrollador" />
-    </div>
-    <div class="img2">
-      <img class="imgSuperior" src="Img/Joker.png" alt="joker" />
-      <img class="imgInferior" src="Img/Retro.png" alt="retro" />
-    </div>
-  </div>
-  <!-- Una Imagen -->
-  <div class="contenedor unaImagen">
-    <div class="inicio-texto">
-      <h3>
-        Creemos que crear instrumentos verdaderamente excepcionales requiere
-        dedicación. Trabajamos solo en unos pocos productos y nos esforzamos
-        por lograr la excelencia.
-      </h3>
-      <p>
-        En lugar de un proceso universal, buscamos brindar a nuestros
-        empleados lo que necesitan para desarrollar su potencial y crecer.
-        Hemos aprendido que los mejores resultados se logran formando equipos
-        con una gran diversidad, capaces de analizar los problemas desde una
-        perspectiva más amplia. No siempre coincidimos, pero valoramos y
-        fomentamos abiertamente la opinión y el debate.
-      </p>
-    </div>
-    <div class="img">
-      <img src="Img/Desarrollador.png" alt="desarrollador" />
-    </div>
-  </div>
-  <!-- Dos Imágenes centradas -->
-  <div class="dosImágenesCentradas">
-    <div class="inicio-texto">
-      <h3>
-        Nos apasiona lo que hacemos, pero también nos apasiona mejorar quiénes
-        somos.
-      </h3>
-      <p>
-        Trabajamos duro para fomentar un entorno donde las personas puedan
-        crecer tanto personal como profesionalmente, y nos esforzamos por
-        crear una gran cantidad de oportunidades para aprender unos de otros y
-        con otros. <br /><br />
-        Además de un programa de capacitación interna, los empleados reciben
-        apoyo activo para adquirir nuevos conocimientos y habilidades, y se
-        les capacita para aplicarlos en su trabajo diario. Además, los
-        talleres de desarrollo y música organizados por el personal ofrecen la
-        oportunidad de debatir sobre nuevas tecnologías, técnicas de
-        producción y mejores prácticas.
-      </p>
-    </div>
-    <div class="img">
-      <div class="img1">
-        <img src="Img/Desarrollador.png" alt="desarrollador" />
+      <div class="navbar-der">
+        <ul>
+          <li><a href="#">Try Live for Free</a></li>
+          <li>
+            <button class="btn">Account</button>
+          </li>
+          <li>
+            <button class="btn">Log out</button>
+          </li>
+        </ul>
       </div>
-      <div class="img2">
-        <img src="Img/Joker.png" alt="joker" />
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="inicio" aria-labelledby="inicio-title">
+      <div class="inicio-enlaces">
+        <a href="#">About</a>
+        <a href="#">Jobs</a>
       </div>
-    </div>
-  </div>
-  <!-- Dos Paneles -->
-  <div class="contenedor dosPaneles">
-    <div class="inicio-texto">
-      <h3>
-        Queremos que a nuestros empleados les encante este lugar. Buscamos
-        talento excepcional de todo el mundo y haremos todo lo posible para
-        que su transición sea lo más sencilla posible.
-      </h3>
-      <p>
-        Si te unes a nosotros en Berlin, te ayudaremos con la mudanza y el
-        papeleo. Incluso te daremos clases gratuitas de alemán o inglés.
-        Además, trabajar en Alemania significa que puedes contar con un seguro
-        médico completo para ti y tu familia, así como generosas bajas por
-        maternidad y paternidad. El horario de oficina es flexible, pero no
-        todo es trabajo; organizamos varias salidas de empresa y equipo a lo
-        largo del año, así como una variedad de actividades divertidas e
-        informales para grupos pequeños.
-      </p>
-    </div>
-    <div class="panel">
-      <img src="Img/Retro.png" alt="retro" />
-      <div class="panel-texto">
+      <h1 id="inicio-title" class="visually-hidden">Página Principal de Ableton</h1>
+      <img src="Img/dev.png" alt="Equipo de desarrolladores trabajando en software musical en una oficina moderna" width="1200" height="600" />
+    </section>
+
+    <section class="contenedor dos-imagenes" aria-labelledby="dos-imagenes-title">
+      <h2 id="dos-imagenes-title" class="visually-hidden">Productos de Ableton</h2>
+      <div class="inicio-texto">
         <h3>
-          Estamos muy orgullosos del trabajo que hemos realizado hasta ahora.
-          Pero aún queda mucho por hacer. Si quieres formar parte, únete a
-          nosotros.
+          Desarrollamos Live, Push, Note, Move y Link: software y hardware
+          únicos para la creación e interpretación musical. Con estos productos,
+          nuestra comunidad de usuarios crea cosas increíbles.
         </h3>
-        <a href="#">Ver los últimos trabajos ></a>
+        <p>
+          Ableton se fundó en 1999 y lanzó la primera versión de Live en 2001.
+          Nuestros productos son utilizados por una comunidad de músicos
+          dedicados, diseñadores de sonido y artistas de todo el mundo.
+        </p>
       </div>
-    </div>
-  </div>
-  <!-- Footer -->
-  <div class="footer">
+      <div class="imagenes-grid">
+        <div class="img1">
+          <img src="Img/Desarrollador.png" alt="Desarrollador de software trabajando en código de producción musical" loading="lazy" width="500" height="500" />
+        </div>
+        <div class="img2">
+          <img src="Img/Joker.png" alt="Ilustración artística relacionada con la cultura musical y la creatividad" loading="lazy" width="480" height="480" />
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor video" aria-labelledby="video-title">
+      <h2 id="video-title" class="visually-hidden">Video Promocional</h2>
+      <div class="inicio-texto">
+        <h3>
+          Hacer música no es fácil. Requiere tiempo, esfuerzo y aprendizaje.
+          Pero cuando te dejas llevar, es increíblemente gratificante.
+        </h3>
+        <p>
+          Sentimos lo mismo al crear productos Ableton. El motor de Ableton es
+          nuestra pasión por lo que hacemos y por las personas para quienes lo
+          hacemos.
+        </p>
+      </div>
+      <div class="video1">
+        <img src="Img/Video1.jpg" alt="Video promocional: Por qué Ableton - HyperLapse mostrando el flujo de trabajo creativo" loading="lazy" width="500" height="500" />
+        <p>Por Qué Ableton? - HyperLapse</p>
+      </div>
+    </section>
+
+    <section class="contenedor tres-imagenes" aria-labelledby="tres-imagenes-title">
+      <h2 id="tres-imagenes-title" class="visually-hidden">Nuestro Equipo Global</h2>
+      <div class="inicio-texto">
+        <h3>
+          Somos más de 350 personas de 30 países diferentes repartidas entre
+          nuestra sede en Berlin y nuestras oficinas en Los Ángeles y Tokio.
+        </h3>
+        <p>
+          La mayoría de nosotros somos músicos, productores y DJs activos, y
+          muchos usamos Live y Push a diario. Provenimos de una amplia gama de
+          trasfondos culturales y profesionales. Algunos tenemos doctorados,
+          otros somos autodidactas, y la mayoría nos encontramos en un punto
+          intermedio. Lo que nos une es la convicción compartida de que cada uno
+          de nosotros tiene las habilidades y los conocimientos para contribuir
+          a algo grande: ayudar a moldear el futuro de la cultura musical.
+        </p>
+      </div>
+      <div class="imagenes-grid">
+        <div class="img1">
+          <img src="Img/Desarrollador.png" alt="Miembro del equipo de Ableton en su estación de trabajo" loading="lazy" width="500" height="500" />
+        </div>
+        <div class="img2">
+          <img class="img-superior" src="Img/Joker.png" alt="Sesión de creatividad en el estudio de Ableton" loading="lazy" width="320" height="240" />
+          <img class="img-inferior" src="Img/Retro.png" alt="Equipo retro de producción musical vintage" loading="lazy" width="320" height="240" />
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor una-imagen" aria-labelledby="una-imagen-title">
+      <h2 id="una-imagen-title" class="visually-hidden">Excelencia en Diseño</h2>
+      <div class="inicio-texto">
+        <h3>
+          Creemos que crear instrumentos verdaderamente excepcionales requiere
+          dedicación. Trabajamos solo en unos pocos productos y nos esforzamos
+          por lograr la excelencia.
+        </h3>
+        <p>
+          En lugar de un proceso universal, buscamos brindar a nuestros
+          empleados lo que necesitan para desarrollar su potencial y crecer.
+          Hemos aprendido que los mejores resultados se logran formando equipos
+          con una gran diversidad, capaces de analizar los problemas desde una
+          perspectiva más amplia. No siempre coincidimos, pero valoramos y
+          fomentamos abiertamente la opinión y el debate.
+        </p>
+      </div>
+      <div class="img">
+        <img src="Img/Desarrollador.png" alt="Equipo de desarrollo enfocado en la creación de software de calidad" loading="lazy" width="800" height="500" />
+      </div>
+    </section>
+
+    <section class="dos-imagenes-centradas" aria-labelledby="dos-centradas-title">
+      <h2 id="dos-centradas-title" class="visually-hidden">Pasión por Mejorar</h2>
+      <div class="inicio-texto">
+        <h3>
+          Nos apasiona lo que hacemos, pero también nos apasiona mejorar quiénes
+          somos.
+        </h3>
+        <p>
+          Trabajamos duro para fomentar un entorno donde las personas puedan
+          crecer tanto personal como profesionalmente, y nos esforzamos por
+          crear una gran cantidad de oportunidades para aprender unos de otros y
+          con otros.
+        </p>
+        <p>
+          Además de un programa de capacitación interna, los empleados reciben
+          apoyo activo para adquirir nuevos conocimientos y habilidades, y se
+          les capacita para aplicarlos en su trabajo diario. Además, los
+          talleres de desarrollo y música organizados por el personal ofrecen la
+          oportunidad de debatir sobre nuevas tecnologías, técnicas de
+          producción y mejores prácticas.
+        </p>
+      </div>
+      <div class="img-grid">
+        <div class="img img1">
+          <img src="Img/Desarrollador.png" alt="Sesión de aprendizaje y desarrollo profesional en Ableton" loading="lazy" width="300" height="300" />
+        </div>
+        <div class="img img2">
+          <img src="Img/Joker.png" alt="Colaboración creativa entre miembros del equipo" loading="lazy" width="500" height="500" />
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor dos-paneles" aria-labelledby="dos-paneles-title">
+      <h2 id="dos-paneles-title" class="visually-hidden">Únete a Nuestro Equipo</h2>
+      <div class="inicio-texto">
+        <h3>
+          Queremos que a nuestros empleados les encante este lugar. Buscamos
+          talento excepcional de todo el mundo y haremos todo lo posible para
+          que su transición sea lo más sencilla posible.
+        </h3>
+        <p>
+          Si te unes a nosotros en Berlin, te ayudaremos con la mudanza y el
+          papeleo. Incluso te daremos clases gratuitas de alemán o inglés.
+          Además, trabajar en Alemania significa que puedes contar con un seguro
+          médico completo para ti y tu familia, así como generosas bajas por
+          maternidad y paternidad. El horario de oficina es flexible, pero no
+          todo es trabajo; organizamos varias salidas de empresa y equipo a lo
+          largo del año, así como una variedad de actividades divertidas e
+          informales para grupos pequeños.
+        </p>
+      </div>
+      <div class="panel">
+        <img src="Img/Retro.png" alt="Oficina de Ableton con equipamiento retro y moderno" loading="lazy" width="500" height="400" />
+        <div class="panel-texto">
+          <h3>
+            Estamos muy orgullosos del trabajo que hemos realizado hasta ahora.
+            Pero aún queda mucho por hacer. Si quieres formar parte, únete a
+            nosotros.
+          </h3>
+          <a href="#">Ver los últimos trabajos ></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Pie de página">
     <div class="titulo">
       <h2>Ableton</h2>
     </div>
-    <div class="footerSup">
+    <div class="footer-sup">
       <div class="enlaces1">
         <ul>
-          <li>Regístrate En Vivo, Empujar o Mover ></li>
-          <li>Acerca De Ableton ></li>
-          <li>Empleos ></li>
+          <li><a href="#">Regístrate En Vivo, Empujar o Mover ></a></li>
+          <li><a href="#">Acerca De Ableton ></a></li>
+          <li><a href="#">Empleos ></a></li>
         </ul>
         <div>
           <h3>Comunidad</h3>
           <ul>
-            <li>Encuentra Grupos De Usuarios De Ableton ></li>
-            <li>Encuentra Capacitación Certificada ></li>
-            <li>Conviértete En Un Entrenador Certificado ></li>
+            <li><a href="#">Encuentra Grupos De Usuarios De Ableton ></a></li>
+            <li><a href="#">Encuentra Capacitación Certificada ></a></li>
+            <li><a href="#">Conviértete En Un Entrenador Certificado ></a></li>
           </ul>
         </div>
       </div>
       <div class="enlaces2">
+        <h3>Educación</h3>
         <ul>
-          <h3>Educación</h3>
-          <li>Ofertas Para Estudiantes Y Profesores ></li>
-          <li>Ableton Para El Aula ></li>
-          <li>Ableton Para Colegios Y Universidades ></li>
+          <li><a href="#">Ofertas Para Estudiantes Y Profesores ></a></li>
+          <li><a href="#">Ableton Para El Aula ></a></li>
+          <li><a href="#">Ableton Para Colegios Y Universidades ></a></li>
         </ul>
-        <div>
+        <div class="idioma">
           <h3>Idioma Y Ubicación</h3>
-          <button>Español (ES)</button>
-          <button>English (US)</button>
+          <button type="button">Español (ES)</button>
+          <button type="button">English (US)</button>
         </div>
       </div>
       <div class="enlaces3">
@@ -241,12 +263,15 @@
           Ingrese su dirección de correo electrónico para mantenerse al día
           con las últimas ofertas, tutoriales, descargas, encuestas y más.
         </p>
-        <input type="email" placeholder="Correo Electrónico" />
-        <button>Inscribirse</button>
+        <form class="newsletter" action="#" method="post">
+          <label for="email" class="visually-hidden">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Correo Electrónico" required autocomplete="email">
+          <button type="submit">Inscribirse</button>
+        </form>
       </div>
     </div>
-    <div class="footerInf">
-      <div class="enlaces">
+    <div class="footer-inf">
+      <nav class="enlaces" aria-label="Enlaces legales">
         <ul>
           <li><a href="#">Contáctenos</a></li>
           <li><a href="#">Recursos de Prensa</a></li>
@@ -256,15 +281,13 @@
           <li><a href="#">Configuración De Cookies</a></li>
           <li><a href="#">Imprimir</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="copy">
-        Hecho en Nic
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEvt1DtKBFEQheFv9qCoqfhag4ruQjAWREwFtyEGYiBMILgQH7gGRTH2hWtwSnqkvfbtOww2JtPh7erz3zp1uno6fnod65sAig7/u0Wz2MZR5qqHOMdzrpW2DkL8CovYxVkiso8TPGAjB8kBQvwaC3jCKl4SwAxuBx3M47GqeUs7aQJMVx+G+D02G8SHOnXIXdXJD0gKCPGwZaUSX8d7ISoBucQyfkHqgHHEh+wp3NQga/iIl10BYuhfVv2FRentv8WbAHGWDrltDq3+5wBxXo9pLknFBLUBhpBIxxJ20E/StIfTKjkR5demtJV20Ry2cJyJ6sHgT78Yd1UUN+UoBaUORtForZkAihZ2btEn8INAGYXPQFUAAAAASUVORK5CYII="
-          alt="Ableton" />
+        <span>Hecho en Nic</span>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEvt1DtKBFEQheFv9qCoqfhag4ruQjAWREwFtyEGYiBMILgQH7gGRTH2hWtwSnqkvfbtOww2JtPh7erz3zp1uno6fnod65sAig7/u0Wz2MZR5qqHOMdzrpW2DkL8CovYxVkiso8TPGAjB8kBQvwaC3jCKl4SwAxuBx3M47GqeUs7aQJMVx+G+D02G8SHOnXIXdXJD0gKCPGwZaUSX8d7ISoBucQyfkHqgHHEh+wp3NQga/iIl10BYuhfVv2FRentv8WbAHGWDrltDq3+5wBxXo9pLknFBLUBhpBIxxJ20E/StIfTKjkR5demtJV20Ry2cJyJ6sHgT78Yd1UUN+UoBaUORtForZkAihZ2btEn8INAGYXPQFUAAAAASUVORK5CYII=" alt="Logo de Ableton" width="20" height="20">
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 
 </html>
