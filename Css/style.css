@@ -2,9 +2,9 @@
    VARIABLES CSS
 ================================ */
 :root {
-  --color-primary: #0000ff99;
-  --color-accent: #ff0000;
-  --color-success: #b8fe06;
+  --color-primary: #0044ee;
+  --color-accent: #e60000;
+  --color-success: #7ab800;
   --color-dark: #000;
   --color-light: #fff;
   --color-gray: #ccc;
@@ -26,10 +26,8 @@
 
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
 
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* ================================
@@ -59,10 +57,10 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -115,8 +113,9 @@ input {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 /* ================================
@@ -137,13 +136,6 @@ header {
 
 label[for="menu-toggle"] {
   display: none;
-}
-
-header > label {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding: var(--space-sm) var(--space-md);
 }
 
 .navbar {
@@ -244,10 +236,6 @@ section,
   object-fit: cover;
 }
 
-.inicio::before {
-  display: none;
-}
-
 /* Textos */
 .inicio-texto {
   width: 100%;
@@ -333,8 +321,7 @@ section,
   max-width: 100%;
 }
 
-.tres-imagenes .img-superior,
-.tres-imagenes .img-inferior {
+.tres-imagenes .img2 img {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
@@ -525,7 +512,7 @@ section,
 }
 
 .footer-inf .enlaces a {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .footer-inf .copy {
@@ -677,12 +664,6 @@ section,
     flex-wrap: wrap;
   }
 
-  .tres-imagenes .img-superior,
-  .tres-imagenes .img-inferior {
-    flex: 1;
-    min-width: 150px;
-  }
-
   .img-grid {
     flex-direction: row;
     justify-content: center;
@@ -742,6 +723,7 @@ section,
   .navbar-izq {
     flex-direction: row;
     align-items: center;
+    gap: var(--space-lg);
   }
 
   .navbar-der {

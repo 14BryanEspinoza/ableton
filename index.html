@@ -14,7 +14,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
 
-  <link rel="stylesheet" href="Css/style.css" />
+  <link rel="preload" href="Css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="Css/style.css"></noscript>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>" />
 
   <title>Ableton - Práctica Frontend</title>
@@ -63,7 +64,7 @@
         <a href="#">Jobs</a>
       </div>
       <h1 id="inicio-title" class="visually-hidden">Página Principal de Ableton</h1>
-      <img src="Img/dev.png" alt="Equipo de desarrolladores trabajando en software musical en una oficina moderna" width="1200" height="600" />
+      <img src="Img/dev.png" alt="Equipo de desarrolladores trabajando en software musical en una oficina moderna" width="1200" height="600" loading="eager" decoding="sync">
     </section>
 
     <section class="contenedor dos-imagenes" aria-labelledby="dos-imagenes-title">
@@ -82,10 +83,10 @@
       </div>
       <div class="imagenes-grid">
         <div class="img1">
-          <img src="Img/Desarrollador.png" alt="Desarrollador de software trabajando en código de producción musical" loading="lazy" width="500" height="500" />
+          <img src="Img/Desarrollador.png" alt="Desarrollador de software trabajando en código de producción musical" loading="lazy" decoding="async" width="500" height="500" />
         </div>
         <div class="img2">
-          <img src="Img/Joker.png" alt="Ilustración artística relacionada con la cultura musical y la creatividad" loading="lazy" width="480" height="480" />
+          <img src="Img/Joker.png" alt="Ilustración artística relacionada con la cultura musical y la creatividad" loading="lazy" decoding="async" width="480" height="480" />
         </div>
       </div>
     </section>
@@ -104,7 +105,7 @@
         </p>
       </div>
       <div class="video1">
-        <img src="Img/Video1.jpg" alt="Video promocional: Por qué Ableton - HyperLapse mostrando el flujo de trabajo creativo" loading="lazy" width="500" height="500" />
+        <img src="Img/Video1.jpg" alt="Video promocional: Por qué Ableton - HyperLapse mostrando el flujo de trabajo creativo" loading="lazy" decoding="async" width="500" height="500" />
         <p>Por Qué Ableton? - HyperLapse</p>
       </div>
     </section>
@@ -128,11 +129,11 @@
       </div>
       <div class="imagenes-grid">
         <div class="img1">
-          <img src="Img/Desarrollador.png" alt="Miembro del equipo de Ableton en su estación de trabajo" loading="lazy" width="500" height="500" />
+          <img src="Img/Desarrollador.png" alt="Miembro del equipo de Ableton en su estación de trabajo" loading="lazy" decoding="async" width="500" height="500" />
         </div>
         <div class="img2">
-          <img class="img-superior" src="Img/Joker.png" alt="Sesión de creatividad en el estudio de Ableton" loading="lazy" width="320" height="240" />
-          <img class="img-inferior" src="Img/Retro.png" alt="Equipo retro de producción musical vintage" loading="lazy" width="320" height="240" />
+          <img src="Img/Joker.png" alt="Sesión de creatividad en el estudio de Ableton" loading="lazy" decoding="async" width="320" height="240" />
+          <img src="Img/Retro.png" alt="Equipo retro de producción musical vintage" loading="lazy" decoding="async" width="320" height="240" />
         </div>
       </div>
     </section>
@@ -155,7 +156,7 @@
         </p>
       </div>
       <div class="img">
-        <img src="Img/Desarrollador.png" alt="Equipo de desarrollo enfocado en la creación de software de calidad" loading="lazy" width="800" height="500" />
+        <img src="Img/Desarrollador.png" alt="Equipo de desarrollo enfocado en la creación de software de calidad" loading="lazy" decoding="async" width="800" height="500" />
       </div>
     </section>
 
@@ -183,10 +184,10 @@
       </div>
       <div class="img-grid">
         <div class="img img1">
-          <img src="Img/Desarrollador.png" alt="Sesión de aprendizaje y desarrollo profesional en Ableton" loading="lazy" width="300" height="300" />
+          <img src="Img/Desarrollador.png" alt="Sesión de aprendizaje y desarrollo profesional en Ableton" loading="lazy" decoding="async" width="300" height="300" />
         </div>
         <div class="img img2">
-          <img src="Img/Joker.png" alt="Colaboración creativa entre miembros del equipo" loading="lazy" width="500" height="500" />
+          <img src="Img/Joker.png" alt="Colaboración creativa entre miembros del equipo" loading="lazy" decoding="async" width="500" height="500" />
         </div>
       </div>
     </section>
@@ -211,7 +212,7 @@
         </p>
       </div>
       <div class="panel">
-        <img src="Img/Retro.png" alt="Oficina de Ableton con equipamiento retro y moderno" loading="lazy" width="500" height="400" />
+        <img src="Img/Retro.png" alt="Oficina de Ableton con equipamiento retro y moderno" loading="lazy" decoding="async" width="500" height="400" />
         <div class="panel-texto">
           <h3>
             Estamos muy orgullosos del trabajo que hemos realizado hasta ahora.
