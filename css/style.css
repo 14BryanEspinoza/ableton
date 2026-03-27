@@ -158,21 +158,6 @@ header {
   color: var(--color-primary);
 }
 
-.navbar-der {
-  display: none;
-}
-
-.navbar-der ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.navbar-der a {
-  color: var(--color-primary);
-  font-size: var(--font-size-sm);
-}
-
 .btn {
   padding: var(--space-xs) var(--space-sm);
   border: 1px solid var(--color-gray);
@@ -181,8 +166,8 @@ header {
 }
 
 .btn:hover {
-  background: var(--color-dark);
-  color: var(--color-light);
+  color: var(--color-dark);
+  background: var(--color-gray-light);
 }
 
 /* ================================
@@ -487,23 +472,24 @@ main {
    MENU HAMBURGUESA (CSS ONLY)
 ================================ */
 @media (max-width: 767px) {
-  label[for="menu-toggle"] {
+  .navbar > label[for="menu-toggle"] {
     cursor: pointer;
     display: block;
     padding: var(--space-sm);
   }
 
-  label[for="menu-toggle"]::before {
+  .navbar > label[for="menu-toggle"]::before {
     content: "☰";
     font-size: var(--font-size-xl);
   }
 
   .navbar-menu {
     display: none;
+    text-align: center;
     flex-direction: column;
     width: 100%;
     gap: 0;
-    margin-top: var(--space-sm);
+    margin-top: var(--space-xs);
   }
 
   .navbar-menu li {
@@ -514,47 +500,25 @@ main {
   .navbar-menu a {
     display: block;
     padding: var(--space-md);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
   }
 
-  .navbar-der {
-    display: none;
-    width: 100%;
-    margin-top: var(--space-md);
-  }
-
-  .navbar-der ul {
+  .navbar-menu .account {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 0;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
   }
 
-  .navbar-der li {
-    width: 100%;
-    border-bottom: 1px solid var(--color-gray-light);
-  }
-
-  .navbar-der a {
-    display: block;
-    padding: var(--space-md);
-  }
-
-  .navbar-der .btn {
-    width: 100%;
-    text-align: center;
-    padding: var(--space-md);
-    border-bottom: 1px solid var(--color-gray-light);
-  }
-
-  #menu-toggle:checked ~ label[for="menu-toggle"]::before {
+  #menu-toggle:checked ~ .navbar > label[for="menu-toggle"]::before {
     content: "✕";
   }
 
-  #menu-toggle:checked ~ header .navbar-menu {
+  #menu-toggle:checked ~ .navbar-menu {
     display: flex;
   }
 
-  #menu-toggle:checked ~ header .navbar-der {
+  #menu-toggle:checked ~ .navbar-der {
     display: flex;
   }
 }
