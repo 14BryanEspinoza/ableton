@@ -1,13 +1,10 @@
 <!doctype html>
 <!-- Lang: Spanish -->
 <html lang="es">
-  <!-- Head -->
   <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
     <meta
       name="description"
       content="Proyecto de práctica HTML y CSS inspirado en el desafío Ableton de la página Frontend Practice."
@@ -19,7 +16,6 @@
     <meta name="author" content="Bryan Espinoza" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Ableton - Frontend Practice" />
     <meta
       property="og:description"
@@ -28,7 +24,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
 
-    <!-- Preload Stylesheet -->
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link
       rel="preload"
       href="css/style.css"
@@ -38,26 +38,18 @@
         this.rel = 'stylesheet';
       "
     />
-    <!-- Navegadores sin soporte de preload -->
     <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
 
-    <!-- Icon -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
-
-    <!-- Title -->
     <title>Ableton - Frontend Practice</title>
   </head>
 
-  <!-- Body -->
   <body>
-    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Header -->
     <header>
-      <!-- Nav -->
       <nav class="navbar" aria-label="Navegación principal">
-        <!-- Logo -->
         <div class="navbar-logo">
           <img
             src="img/favicon.png"
@@ -67,16 +59,12 @@
           />
         </div>
 
-        <!-- Hamburger Menu -->
         <label for="menu-toggle" aria-label="Abrir menú de navegación"></label>
       </nav>
 
-      <!-- Checkbox Menu -->
       <input type="checkbox" id="menu-toggle" />
 
-      <!-- Links -->
       <div class="navbar-menu">
-        <!-- Menu Links -->
         <ul class="menu-links">
           <li><a href="#">Live</a></li>
           <li><a href="#">Push</a></li>
@@ -87,7 +75,6 @@
           <li><a href="#">More +</a></li>
         </ul>
 
-        <!-- Account Links -->
         <ul class="account">
           <li><a href="#">Try Live for Free</a></li>
           <li>
@@ -100,9 +87,7 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main id="main-content">
-      <!-- Section Home -->
       <section class="inicio" aria-labelledby="inicio-title">
         <!-- Link -->
         <div class="inicio-enlaces">
@@ -125,7 +110,7 @@
       </section>
 
       <!-- Section Products -->
-      <section class="contenedor products" aria-labelledby="products-title">
+      <section class="contenedor" aria-labelledby="products-title">
         <!-- Container -->
         <div class="inicio-texto">
           <!-- Title -->
@@ -290,7 +275,7 @@
         </div>
 
         <!-- Container Img -->
-        <div class="img">
+        <div>
           <!-- Img -->
           <img
             src="img/developer.png"

@@ -2,33 +2,48 @@
 VARIABLES CSS
 ================================ */
 :root {
-  /* Colors */
-  --color-primary: #0044ee;
-  --color-accent: #e60000;
-  --color-success: #7ab800;
-  --color-dark: #000;
-  --color-light: #fff;
-  --color-gray: #ccc;
+  /* Colors - Ableton-inspired modern palette */
+  --color-primary: #0044ee; /* Hover blue */
+  --color-accent: #ff4a00;  /* Ableton red */
+  --color-accent-hover: #0044ee; /* Blue on hover */
+  --color-dark: #0a0a0a;    /* Soft black */
+  --color-light: #ffffff;
+  --color-gray: #cccccc;
   --color-gray-light: #f5f5f5;
+  --color-gray-medium: #666666;
 
-  /* Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 4rem;
-  --space-2xl: 6rem;
+  /* Spacing - Whitespace System */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 2rem;      /* 32px */
+  --space-xl: 3rem;      /* 48px */
+  --space-2xl: 4rem;     /* 64px */
+  --space-section: 6rem; /* 96px for mobile sections */
+  --space-section-desktop: 10rem; /* 160px for desktop sections */
+  --space-gap: 2rem;     /* Grid gap mobile */
+  --space-gap-desktop: 3rem; /* Grid gap desktop */
+  --space-card: 2.5rem;  /* Card padding */
 
-  /* Typography */
-  --font-family: "Arial", sans-serif;
+  /* Typography - Inter with modern scale */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --line-height: 1.4;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-2xl: 2.5rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  --line-height: 1.6;
 
   /* Shadow */
-  --shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
 /* ================================
@@ -99,7 +114,19 @@ UTILIDADES
 }
 
 .skip-link:focus {
-  top: var(--space-sm);
+  top: var(--space-xs);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 :focus-visible {
@@ -116,7 +143,7 @@ header {
   top: 0;
   z-index: 100;
   background: var(--color-light);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 
 #menu-toggle {
@@ -129,13 +156,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-sm) var(--space-md);
-  border-bottom: 1px solid var(--color-gray);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-gray-light);
 }
 
 .navbar-logo img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .navbar-menu {
@@ -155,10 +182,12 @@ header {
 }
 
 .btn {
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
   border: 1px solid var(--color-gray);
+  border-radius: var(--radius-sm);
   background: transparent;
   transition: all 0.2s;
+  font-weight: 600;
 }
 
 .btn:hover {
@@ -174,7 +203,18 @@ main {
 }
 
 .contenedor {
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-section) var(--space-md);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor a:not(.btn):not(.skip-link) {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
 }
 
 /* Inicio */
@@ -200,7 +240,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   color: var(--color-accent);
 }
 
@@ -228,16 +268,25 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-gap);
 }
 
 .img1 {
   padding: var(--space-md);
-  background-color: rgba(184, 254, 6, 0.3);
+  background-color: rgba(255, 74, 0, 0.08);
+  border-radius: var(--radius-md);
 }
 
-.img1 img {
+.img1 img,
+.img2 img {
   width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.img2 {
+  padding: var(--space-md);
+  background-color: rgba(0, 68, 238, 0.08);
+  border-radius: var(--radius-md);
 }
 
 /* Preview Video */
@@ -249,6 +298,7 @@ main {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  border-radius: var(--radius-md);
 }
 
 .preview-video p {
@@ -263,7 +313,7 @@ main {
 
 .equipo .imagenes-grid .img2 {
   padding: var(--space-md);
-  background-color: rgba(184, 254, 6, 0.3);
+  background-color: rgba(0, 68, 238, 0.08);
 }
 
 .equipo .imagenes-grid .img2 img {
@@ -271,24 +321,19 @@ main {
   margin: 0 auto;
 }
 
-/* Una imagen */
-.diseño .img {
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
-}
+
 
 /* Dos imágenes centradas */
 .pasión {
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-section) var(--space-md);
 }
 
 .img-grid {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
-  background: rgba(6, 14, 254, 0.5);
+  gap: var(--space-gap);
+  margin-top: var(--space-gap);
+  background: rgba(0, 68, 238, 0.08);
 }
 
 .pasión .img {
@@ -310,10 +355,13 @@ main {
 .paneles .panel {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
-  padding: var(--space-sm);
-  background: rgba(6, 14, 254, 0.5);
+  gap: var(--space-gap);
+  margin-top: var(--space-gap);
+  padding: var(--space-card);
+  background: rgba(255, 74, 0, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
 .panel img {
@@ -322,7 +370,7 @@ main {
 }
 
 .panel-texto {
-  padding: var(--space-sm);
+  padding: var(--space-card);
 }
 
 .panel-texto h3 {
@@ -333,16 +381,16 @@ main {
 .panel-texto a {
   font-size: var(--font-size-base);
   font-weight: bold;
-  color: var(--color-gray-light);
+  color: var(--color-accent);
 }
 
 /* ================================
    FOOTER
 ================================ */
 .footer {
-  padding: var(--space-lg) var(--space-sm);
+  padding: var(--space-xl) var(--space-lg);
   margin-top: var(--space-md);
-  border-top: 1px solid var(--color-gray);
+  border-top: 1px solid var(--color-gray-light);
 }
 
 .footer .titulo {
@@ -422,16 +470,25 @@ main {
 
 .newsletter input {
   width: 100%;
-  padding: var(--space-sm);
+  padding: var(--space-md);
   border: 1px solid var(--color-gray);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
 }
 
 .newsletter button {
   width: fit-content;
-  padding: var(--space-sm);
-  border: 1px solid var(--color-gray);
-  background: var(--color-gray-light);
-  color: var(--color-dark);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-light);
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.newsletter button:hover {
+  background: var(--color-accent-hover);
 }
 
 .footer-inf {
@@ -440,7 +497,7 @@ main {
   gap: var(--space-sm);
   margin-top: var(--space-md);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--color-gray);
+  border-top: 1px solid var(--color-gray-light);
 }
 
 .footer-inf .enlaces ul {
@@ -654,7 +711,7 @@ main {
 
   section,
   .contenedor {
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-section-desktop) var(--space-lg);
   }
 
   .inicio {
@@ -663,6 +720,7 @@ main {
 
   .inicio-texto {
     width: 60%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -720,17 +778,7 @@ main {
     justify-content: center;
   }
 
-  .diseño .img {
-    max-width: 500px;
-    height: 500px;
-    overflow: hidden;
-  }
 
-  .diseño .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
   .pasión .img {
     max-width: 300px;
