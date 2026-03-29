@@ -129,13 +129,11 @@ input {
   outline-offset: 1px;
 }
 
-/* ================================
-HEADER / NAVBAR
-================================ */
+/* HEADER / NAVBAR */
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 90;
   background: var(--color-light);
   box-shadow: var(--shadow-sm);
 }
@@ -150,25 +148,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-md) var(--space-lg);
-  border-bottom: 1px solid var(--color-gray-light);
+  padding: var(--space-sm) var(--space-md);
 }
 
 .navbar-logo img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 .navbar-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
 }
 
 .navbar-menu a {
-  font-size: var(--font-size-sm);
+  transition: color 0.5s;
+  font-size: var(--font-size-xs);
   padding: var(--space-xs);
-  transition: color 0.2s;
 }
 
 .navbar-menu a:hover {
@@ -176,17 +172,17 @@ header {
 }
 
 .btn {
-  padding: var(--space-sm) var(--space-lg);
-  border: 1px solid var(--color-gray);
-  border-radius: var(--radius-sm);
-  background: transparent;
-  transition: all 0.2s;
+  transition: all 0.5s;
   font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-gray);
+  background: transparent;
 }
 
 .btn:hover {
-  color: var(--color-dark);
-  background: var(--color-gray-light);
+  color: var(--color-light);
+  background: var(--color-primary);
 }
 
 /* Main - Sections */
@@ -510,25 +506,21 @@ main {
   margin-top: var(--space-sm);
 }
 
-/* ================================
-   MENU HAMBURGUESA (CSS ONLY)
-================================ */
+/* MENU HAMBURGUESA (CSS ONLY) */
 @media (max-width: 767px) {
   .navbar > label[for="menu-toggle"] {
     cursor: pointer;
-    display: block;
-    padding: var(--space-sm);
   }
 
   .navbar > label[for="menu-toggle"]::before {
     content: "☰";
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
   }
 
   .navbar-menu {
     display: none;
-    text-align: center;
     flex-direction: column;
+    text-align: center;
     width: 100%;
     gap: 0;
     margin-top: var(--space-xs);
@@ -536,24 +528,19 @@ main {
 
   .navbar-menu li {
     width: 100%;
-    border-bottom: 1px solid var(--color-gray-light);
   }
 
   .navbar-menu a {
     display: block;
-    padding: var(--space-md);
     font-size: var(--font-size-sm);
+    padding: var(--space-sm);
   }
 
   .navbar-menu .account {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    margin-bottom: var(--space-md);
-  }
-
-  #menu-toggle:checked ~ .navbar > label[for="menu-toggle"]::before {
-    content: "✕";
+    margin: var(--space-lg) 0;
   }
 
   #menu-toggle:checked ~ .navbar-menu {
@@ -573,21 +560,16 @@ main {
     display: none;
   }
 
-  .navbar {
-    flex-shrink: 0;
-  }
-
   #menu-toggle {
     display: none;
   }
 
   .navbar-menu {
     display: flex;
-    flex: 1;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--space-sm);
-    margin-left: var(--space-lg);
+    gap: var(--space-xs);
+    margin-right: var(--space-sm);
   }
 
   .menu-links,
@@ -595,11 +577,15 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
   }
 
   .navbar-menu a {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
+  }
+
+  .account .btn {
+    font-size: var(--font-size-sm);
   }
 
   /* Container Text */
@@ -715,13 +701,11 @@ main {
 /* Responsive - Desktop (1024px) */
 @media (min-width: 1024px) {
   .navbar {
-    padding: var(--space-sm) var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
   }
 
   .navbar-menu {
     gap: var(--space-lg);
-    flex: none;
-    margin: 0;
     margin-right: var(--space-md);
   }
 
