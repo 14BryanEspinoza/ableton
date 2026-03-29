@@ -1,13 +1,10 @@
 <!doctype html>
 <!-- Lang: Spanish -->
 <html lang="es">
-  <!-- Head -->
   <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
     <meta
       name="description"
       content="Proyecto de práctica HTML y CSS inspirado en el desafío Ableton de la página Frontend Practice."
@@ -19,7 +16,6 @@
     <meta name="author" content="Bryan Espinoza" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Ableton - Frontend Practice" />
     <meta
       property="og:description"
@@ -28,15 +24,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
 
-    <!-- Typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Css Preload -->
     <link
       rel="preload"
       href="css/style.css"
@@ -48,19 +40,13 @@
     />
     <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
 
-    <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
-
-    <!-- Page Title -->
     <title>Ableton - Frontend Practice</title>
   </head>
 
-  <!-- Body -->
   <body>
-    <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Header -->
     <header>
       <nav class="navbar" aria-label="Navegación principal">
         <div class="navbar-logo">
@@ -102,13 +88,16 @@
 
     <main id="main-content">
       <section class="inicio" aria-labelledby="inicio-title">
+        <!-- Link -->
         <div class="inicio-enlaces">
           <a href="#">About</a>
           <a href="#">Jobs</a>
         </div>
 
+        <!-- Title -->
         <h1 id="inicio-title" class="visually-hidden">Ableton</h1>
 
+        <!-- Img -->
         <img
           src="img/wallpaper.png"
           alt="Vista de una montaña nevada japonesa desde una ventana de una casa"
@@ -119,14 +108,18 @@
         />
       </section>
 
+      <!-- Section Products -->
       <section class="contenedor" aria-labelledby="products-title">
+        <!-- Container -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="products-title">
             Desarrollamos Live, Push, Note, Move y Link: software y hardware
             únicos para la creación e interpretación musical. Con estos
             productos, nuestra comunidad de usuarios crea cosas increíbles.
           </h2>
 
+          <!-- Text -->
           <p>
             Ableton se fundó en 1999 y lanzó la primera versión de Live en 2001.
             Nuestros productos son utilizados por una comunidad de músicos
@@ -134,7 +127,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div class="imagenes-grid">
+          <!-- Img -->
           <div class="img1">
             <img
               src="img/ilustration.png"
@@ -146,6 +141,7 @@
             />
           </div>
 
+          <!-- Img -->
           <div class="img2">
             <img
               src="img/developer.png"
@@ -159,13 +155,17 @@
         </div>
       </section>
 
+      <!-- Section Video -->
       <section class="contenedor video" aria-labelledby="video-title">
+        <!-- Container  -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="video-title">
             Hacer música no es fácil. Requiere tiempo, esfuerzo y aprendizaje.
             Pero cuando te dejas llevar, es increíblemente gratificante.
           </h2>
 
+          <!-- Text -->
           <p>
             Sentimos lo mismo al crear productos Ableton. El motor de Ableton es
             nuestra pasión por lo que hacemos y por las personas para quienes lo
@@ -173,7 +173,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div class="preview-video">
+          <!-- Img -->
           <img
             src="img/preview.jpg"
             alt="Video promocional: Por qué Ableton - HyperLapse mostrando el flujo de trabajo creativo"
@@ -183,17 +185,22 @@
             height="640"
           />
 
+          <!-- Text -->
           <p>Por Qué Ableton? - HyperLapse</p>
         </div>
       </section>
 
+      <!-- Section Team -->
       <section class="contenedor equipo" aria-labelledby="team-title">
+        <!-- Container -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="team-title">
             Somos más de 350 personas de 30 países diferentes repartidas entre
             nuestra sede en Berlin y nuestras oficinas en Los Ángeles y Tokio.
           </h2>
 
+          <!-- Text -->
           <p>
             La mayoría de nosotros somos músicos, productores y DJs activos, y
             muchos usamos Live y Push a diario. Provenimos de una amplia gama de
@@ -206,7 +213,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div class="imagenes-grid">
+          <!-- Img -->
           <div class="img1">
             <img
               src="img/developer.png"
@@ -218,6 +227,7 @@
             />
           </div>
 
+          <!-- Img -->
           <div class="img2">
             <img
               src="img/ilustration.png"
@@ -228,6 +238,7 @@
               height="418"
             />
 
+            <!-- Img -->
             <img
               src="img/computer.png"
               alt="Equipo retro de producción musical vintage"
@@ -240,14 +251,18 @@
         </div>
       </section>
 
+      <!-- Section Design -->
       <section class="contenedor" aria-labelledby="una-imagen-title">
+        <!-- Container -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="una-imagen-title">
             Creemos que crear instrumentos verdaderamente excepcionales requiere
             dedicación. Trabajamos solo en unos pocos productos y nos esforzamos
             por lograr la excelencia.
           </h2>
 
+          <!-- Text -->
           <p>
             En lugar de un proceso universal, buscamos brindar a nuestros
             empleados lo que necesitan para desarrollar su potencial y crecer.
@@ -258,7 +273,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div>
+          <!-- Img -->
           <img
             src="img/developer.png"
             alt="Equipo de desarrollo enfocado en la creación de software de calidad"
@@ -271,12 +288,15 @@
       </section>
 
       <section class="contenedor" aria-labelledby="pasión-title">
+        <!-- Container -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="pasión-title">
             Nos apasiona lo que hacemos, pero también nos apasiona mejorar
             quiénes somos.
           </h2>
 
+          <!-- Text -->
           <p>
             Trabajamos duro para fomentar un entorno donde las personas puedan
             crecer tanto personal como profesionalmente, y nos esforzamos por
@@ -293,7 +313,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div class="img-grid">
+          <!-- Img -->
           <div class="img img1">
             <img
               src="img/developer.png"
@@ -305,6 +327,7 @@
             />
           </div>
 
+          <!-- Img -->
           <div class="img img2">
             <img
               src="img/ilustration.png"
@@ -318,14 +341,18 @@
         </div>
       </section>
 
+      <!-- Section Paneles -->
       <section class="contenedor paneles" aria-labelledby="paneles-title">
+        <!-- Container -->
         <div class="inicio-texto">
+          <!-- Title -->
           <h2 id="paneles-title">
             Queremos que a nuestros empleados les encante este lugar. Buscamos
             talento excepcional de todo el mundo y haremos todo lo posible para
             que su transición sea lo más sencilla posible.
           </h2>
 
+          <!-- Text -->
           <p>
             Si te unes a nosotros en Berlin, te ayudaremos con la mudanza y el
             papeleo. Incluso te daremos clases gratuitas de alemán o inglés.
@@ -338,7 +365,9 @@
           </p>
         </div>
 
+        <!-- Container Img -->
         <div class="panel">
+          <!-- Img -->
           <img
             src="img/computer.png"
             alt="Oficina de Ableton con equipamiento retro y moderno"
@@ -348,13 +377,16 @@
             height="750"
           />
 
+          <!-- Container Text -->
           <div class="panel-texto">
+            <!-- Title -->
             <h3>
               Estamos muy orgullosos del trabajo que hemos realizado hasta
               ahora. Pero aún queda mucho por hacer. Si quieres formar parte,
               únete a nosotros.
             </h3>
 
+            <!-- Link -->
             <a href="#">Ver los últimos trabajos ></a>
           </div>
         </div>
@@ -363,28 +395,22 @@
 
     <!-- Footer -->
     <footer class="footer" aria-label="Pie de página">
-      <!-- Title Container -->
+      <!-- Title -->
       <div class="titulo">
         <h2>Ableton</h2>
       </div>
 
-      <!-- Footer Top -->
+      <!-- Links Group -->
       <div class="footer-sup">
-        <!-- Community -->
-        <div class="container-community">
-          <!-- Links -->
+        <!-- Links 1 -->
+        <div class="enlaces1">
           <ul>
             <li><a href="#">Regístrate En Vivo, Empujar o Mover ></a></li>
             <li><a href="#">Acerca De Ableton ></a></li>
             <li><a href="#">Empleos ></a></li>
           </ul>
-
-          <!-- Community -->
           <div>
-            <!-- Title -->
             <h3>Comunidad</h3>
-
-            <!-- Links -->
             <ul>
               <li><a href="#">Encuentra Grupos De Usuarios De Ableton ></a></li>
               <li><a href="#">Encuentra Capacitación Certificada ></a></li>
@@ -395,48 +421,32 @@
           </div>
         </div>
 
-        <!-- Education -->
-        <div class="container-education">
-          <!-- Tittle -->
+        <!-- Links 2 -->
+        <div class="enlaces2">
           <h3>Educación</h3>
-
-          <!-- Links -->
           <ul>
             <li><a href="#">Ofertas Para Estudiantes Y Profesores ></a></li>
             <li><a href="#">Ableton Para El Aula ></a></li>
             <li><a href="#">Ableton Para Colegios Y Universidades ></a></li>
           </ul>
-
-          <!-- Language -->
-          <div class="lang">
-            <!-- Title -->
+          <div class="idioma">
             <h3>Idioma Y Ubicación</h3>
-
-            <!-- Btn Lang -->
             <button type="button">Español (ES)</button>
             <button type="button">English (US)</button>
           </div>
         </div>
 
-        <!-- Newsletter -->
-        <div class="container-newsletter">
-          <!-- Title -->
+        <!-- Links 3 -->
+        <div class="enlaces3">
           <h3>Suscribe a nuestro boletín</h3>
-
-          <!-- Text -->
           <p>
             Ingrese su dirección de correo electrónico para mantenerse al día
             con las últimas ofertas, tutoriales, descargas, encuestas y más.
           </p>
-
-          <!-- Form -->
           <form class="newsletter" action="#" method="post">
-            <!-- Label -->
             <label for="email" class="visually-hidden"
               >Correo electrónico</label
             >
-
-            <!-- Input -->
             <input
               type="email"
               id="email"
@@ -445,17 +455,15 @@
               required
               autocomplete="email"
             />
-
-            <!-- Button -->
             <button type="submit">Inscribirse</button>
           </form>
         </div>
       </div>
 
-      <!-- Footer Bottom -->
+      <!-- Información Adicional -->
       <div class="footer-inf">
-        <!-- Legal Links -->
-        <nav class="legal-links" aria-label="Enlaces legales">
+        <!-- Enlaces Legales -->
+        <nav class="enlaces" aria-label="Enlaces legales">
           <ul>
             <li><a href="#">Contáctenos</a></li>
             <li><a href="#">Recursos de Prensa</a></li>
