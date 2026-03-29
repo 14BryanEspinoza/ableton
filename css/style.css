@@ -677,6 +677,23 @@ main {
     flex: 1;
   }
 
+  .lang button {
+    width: fit-content;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .newsletter input {
+    padding: var(--space-md) var(--space-md);
+  }
+
+  .newsletter input:focus {
+    box-shadow: var(--shadow-md);
+  }
+
+  .newsletter button {
+    padding: var(--space-sm) var(--space-md);
+  }
+
   .footer-inf .legal-links ul {
     justify-content: center;
     flex-direction: row;
