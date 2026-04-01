@@ -1,6 +1,6 @@
 # Ableton UI - Frontend Practice
 
-Sitio web estático de una sola página inspirado en [Ableton](https://www.ableton.com), desarrollado como práctica de maquetación moderna y minimalista. Proyecto enfocado en el desafío de [Frontend Practice](https://www.frontendpractice.com), manteniendo un diseño limpio, tipografía cuidada y experiencia responsive.
+Sitio web estático de una sola página inspirado en el desafio Ableton, desarrollado como práctica de maquetación moderna y minimalista. Proyecto enfocado en el desafío de [Frontend Practice](https://www.frontendpractice.com), manteniendo un diseño limpio, tipografía cuidada y experiencia responsive.
 
 ## Descripción
 
@@ -66,11 +66,6 @@ No requiere instalación ni build. Abrir `index.html` directamente en el navegad
 - Opción 1: Abrir el archivo localmente.
 - Opción 2: GitHub Page
   [Ver Proyecto](https://14bryanespinoza.github.io/ableton/)
-
-## Referencia
-
-- Diseño visual: [Ableton.com](https://www.ableton.com)
-- Desafío: [Frontend Practice - Ableton](https://www.frontendpractice.com)
 
 ## Autor
 
