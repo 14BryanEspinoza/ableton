@@ -64,7 +64,7 @@ Página informativa ficticia que reproduce un estilo minimalista inspirado en Ab
 No requiere instalación ni build. Abrir `index.html` directamente en el navegador.
 
 - Opción 1: Abrir el archivo localmente.
-- Opción 2: Netlify
+- Opción 2: GitHub Page
   [Ver Proyecto](https://14bryanespinoza.github.io/ableton/)
 
 ## Referencia
