@@ -65,7 +65,7 @@ No requiere instalación ni build. Abrir `index.html` directamente en el navegad
 
 - Opción 1: Abrir el archivo localmente.
 - Opción 2: Netlify
-  [Ver Proyecto](https://ableton14bz.netlify.app/)
+  [Ver Proyecto](https://14bryanespinoza.github.io/ableton/)
 
 ## Referencia
 
