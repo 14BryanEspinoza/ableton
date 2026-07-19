@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Lang: Spanish -->
-<html lang="es">
+<!-- Lang: English -->
+<html lang="en">
   <!-- Head -->
   <head>
     <!-- Meta Tags -->
@@ -10,80 +10,75 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="Proyecto de práctica HTML y CSS inspirado en el desafío Ableton de la página Frontend Practice."
+      content="HTML and CSS practice project inspired by the Ableton challenge of the Frontend Practice page."
     />
     <meta
       name="keywords"
-      content="Ableton, práctica HTML, práctica CSS, Frontend-Practice"
+      content="Ableton, HTML Practice, CSS Practice, Frontend-Practice"
     />
     <meta name="author" content="Bryan Espinoza" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Ableton - Frontend Practice" />
+    <meta property="og:title" content="Ableton UI - Frontend Practice" />
     <meta
       property="og:description"
-      content="Proyecto de práctica HTML y CSS inspirado en el desafío Ableton de la página Frontend Practice."
+      content="HTML and CSS practice project inspired by the Ableton challenge of the Frontend Practice page."
     />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card  -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ableton UI - Frontend Practice" />
+    <meta
+      name="twitter:description"
+      content="HTML and CSS practice project inspired by the Ableton challenge of the Frontend Practice page."
+    />
+    <meta name="twitter:image" content="" />
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Css Preload -->
-    <link
-      rel="preload"
-      href="css/style.css"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 
     <!-- Page Title -->
-    <title>Ableton - Frontend Practice</title>
+    <title>Ableton UI - Frontend Practice</title>
   </head>
 
   <!-- Body -->
   <body>
     <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar" aria-label="Navegación principal">
-        <!-- Logo -->
-        <div class="navbar-logo">
-          <img
+    <header class="header">
+      <figure class="header-logo">
+        <a href="/"
+          ><img
             src="img/favicon.png"
-            alt="Logo de Ableton"
-            width="40"
-            height="40"
-          />
-        </div>
+            alt="logo de la pagina"
+            width="35"
+            height="35"
+        /></a>
+      </figure>
 
-        <!-- Menu Toggle -->
-        <label for="menu-toggle"></label>
-      </nav>
-
-      <!-- Menu -->
       <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" aria-label="Abrir menú"></label>
 
-      <!-- Menu Links -->
-      <div class="navbar-menu">
-        <ul class="menu-links">
+      <nav class="header__list" aria-label="Principal">
+        <ul>
           <li><a href="#">Live</a></li>
           <li><a href="#">Push</a></li>
           <li><a href="#">Link</a></li>
@@ -93,8 +88,7 @@
           <li><a href="#">More +</a></li>
         </ul>
 
-        <!-- Account -->
-        <ul class="account">
+        <ul>
           <li><a href="#">Try Live for Free</a></li>
           <li>
             <button class="btn">Account</button>
