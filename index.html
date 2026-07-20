@@ -26,7 +26,10 @@
       content="Frontend practice project showcasing modern HTML, CSS, and responsive design skills."
     />
     <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <meta
+      property="og:url"
+      content="https://14bryanespinoza.github.io/ableton/"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
 
@@ -51,7 +54,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
 
     <!-- Page Title -->
     <title>Frontend Practice - UI Clone</title>
@@ -64,20 +67,20 @@
 
     <!-- Header -->
     <header class="header">
+      <!-- Logo -->
       <figure class="header-logo">
         <a href="/"
-          ><img
-            src="img/favicon.png"
-            alt="Site logo"
-            width="35"
-            height="35"
+          ><img src="img/favicon.png" alt="Ableton logo" width="35" height="35"
         /></a>
       </figure>
 
+      <!-- Menu Hack -->
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle" aria-label="Open menu"></label>
 
+      <!-- Navigation -->
       <nav class="header__list" aria-label="Principal">
+        <!-- Links -->
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Projects</a></li>
@@ -88,6 +91,7 @@
           <li><a href="#">More +</a></li>
         </ul>
 
+        <!-- Account -->
         <ul>
           <li><a href="#">Get Started</a></li>
           <li>
@@ -97,7 +101,7 @@
             <button class="btn">Log out</button>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
@@ -114,22 +118,24 @@
         <h1 id="home-title">Ableton</h1>
 
         <!-- Image -->
-        <img
-          src="img/wallpaper.png"
-          alt="Snowy Japanese mountain view from a house window"
-          loading="eager"
-          decoding="sync"
-          width="736"
-          height="425"
-        />
+        <figure>
+          <img
+            src="img/wallpaper.png"
+            alt=""
+            loading="eager"
+            decoding="sync"
+            width="736"
+            height="425"
+          />
+        </figure>
       </section>
 
-      <!-- Products -->
-      <section class="contenedor" aria-labelledby="products-title">
+      <!-- Create -->
+      <section class="contenedor" aria-labelledby="create-title">
         <!-- Container Text -->
         <div class="container-text">
           <!-- Title -->
-          <h2 id="products-title">
+          <h2 id="create-title">
             We build modern, responsive, and accessible web experiences using
             the latest frontend technologies. Every line of code is crafted with
             purpose and attention to detail.
@@ -143,40 +149,40 @@
           </p>
         </div>
 
-        <!-- Image Grid -->
-        <div class="products-grid">
+        <!-- Two Image -->
+        <div class="two-image">
           <!-- Img -->
-          <div class="img1">
+          <figure class="container-image">
             <img
-              src="img/ilustration.png"
-              alt="Artistic illustration of a ferris wheel in an amusement park"
+              src="img/developer.png"
+              alt="Developer working at a desk with multiple monitors displaying code"
               loading="lazy"
               decoding="async"
               width="736"
               height="418"
             />
-          </div>
+          </figure>
 
           <!-- Img -->
-          <div class="img2">
+          <figure class="container-image hide-mobile">
             <img
-              src="img/developer.png"
-              alt="Software developer working on production code"
+              src="img/linux.png"
+              alt="Linux terminal with command-line tools and system information"
               loading="lazy"
               decoding="async"
               width="736"
               height="1104"
             />
-          </div>
+          </figure>
         </div>
       </section>
 
-      <!-- Video -->
-      <section class="contenedor" aria-labelledby="video-title">
+      <!-- Clean Code -->
+      <section class="contenedor" aria-labelledby="clean-code-title">
         <!-- Container Text -->
         <div class="container-text">
           <!-- Title -->
-          <h2 id="video-title">
+          <h2 id="clean-code-title">
             Writing clean code isn't easy. It takes time, effort, and constant
             learning. But when everything clicks into place, it's incredibly
             rewarding.
@@ -190,12 +196,12 @@
           </p>
         </div>
 
-        <!-- Preview Video -->
-        <div class="preview-video">
+        <!-- One Image -->
+        <figure class="container-image one-image">
           <!-- Img -->
           <img
-            src="img/preview.jpg"
-            alt="Promotional video thumbnail showing creative workflow"
+            src="img/reset.png"
+            alt="Mobile phone displaying a blog post about CSS reset techniques"
             loading="lazy"
             decoding="async"
             width="360"
@@ -203,8 +209,8 @@
           />
 
           <!-- Caption -->
-          <p>Why Frontend? - A Developer's Journey</p>
-        </div>
+          <figcaption>Why Frontend? - A Developer's Journey</figcaption>
+        </figure>
       </section>
 
       <!-- Team -->
@@ -213,8 +219,8 @@
         <div class="container-text">
           <!-- Title -->
           <h2 id="team-title">
-            We're a diverse group of developers, designers, and creatives
-            united by our passion for building great web experiences.
+            We're a diverse group of developers, designers, and creatives united
+            by our passion for building great web experiences.
           </h2>
 
           <!-- Text -->
@@ -227,50 +233,52 @@
           </p>
         </div>
 
-        <!-- Image Grid -->
-        <div class="team-grid">
+        <!-- There Image -->
+        <div class="there-image">
           <!-- Img -->
-          <div class="img1">
+          <figure class="container-image">
             <img
-              src="img/developer.png"
-              alt="Team member at their workstation"
+              src="img/person.png"
+              alt="Two creative professionals collaborating at a modern workspace"
               loading="lazy"
               decoding="async"
               width="736"
               height="1104"
             />
-          </div>
+          </figure>
 
           <!-- Img -->
-          <div class="img2">
+          <figure class="container-image hide-mobile">
             <img
-              src="img/ilustration.png"
-              alt="Creative session in the studio"
+              src="img/packman.png"
+              alt="Retro Pac-Man arcade game with colorful maze and ghost characters"
               loading="lazy"
               decoding="async"
               width="736"
               height="418"
             />
+          </figure>
 
-            <!-- Img -->
+          <!-- Img -->
+          <figure class="container-image hide-mobile">
             <img
-              src="img/computer.png"
-              alt="Vintage music production setup"
+              src="img/2027.png"
+              alt="Desk calendar open to the year 2027"
               loading="lazy"
               decoding="async"
               width="564"
               height="750"
             />
-          </div>
+          </figure>
         </div>
       </section>
 
       <!-- Creativity -->
-      <section class="contenedor" aria-labelledby="creatividad-title">
+      <section class="contenedor" aria-labelledby="creativity-title">
         <!-- Container Text -->
         <div class="container-text">
           <!-- Title -->
-          <h2 id="creatividad-title">
+          <h2 id="creativity-title">
             We believe that creating exceptional web experiences requires
             dedication. We focus on the fundamentals — performance,
             accessibility, and usability — and strive for excellence.
@@ -285,18 +293,18 @@
           </p>
         </div>
 
-        <!-- Img -->
-        <div class="creativity-img">
+        <!-- One Image -->
+        <figure class="container-image one-image">
           <!-- Img -->
           <img
-            src="img/developer.png"
-            alt="Development team focused on quality software"
+            src="img/code.png"
+            alt="Code editor with colorful syntax highlighting on a dark theme"
             loading="lazy"
             decoding="async"
             width="736"
             height="1104"
           />
-        </div>
+        </figure>
       </section>
 
       <!-- Passion -->
@@ -315,46 +323,46 @@
             personally and professionally. We believe in learning from each
             other and sharing knowledge freely. <br /><br />
             From internal workshops and code reviews to conference talks and
-            open source contributions, we provide opportunities to explore
-            new technologies, refine best practices, and push the boundaries
-            of what's possible on the web.
+            open source contributions, we provide opportunities to explore new
+            technologies, refine best practices, and push the boundaries of
+            what's possible on the web.
           </p>
         </div>
 
-        <!-- Image Grid -->
-        <div class="img-grid">
+        <!-- Two Image -->
+        <div class="two-image">
           <!-- Img -->
-          <div class="img img1">
+          <figure class="container-image">
             <img
-              src="img/developer.png"
-              alt="Learning and professional development session"
+              src="img/github.png"
+              alt="GitHub profile dashboard showing contribution graph and repository list"
               loading="lazy"
               decoding="async"
               width="736"
               height="1104"
             />
-          </div>
+          </figure>
 
           <!-- Img -->
-          <div class="img img2">
+          <figure class="container-image hide-mobile">
             <img
-              src="img/ilustration.png"
-              alt="Creative collaboration between team members"
+              src="img/terminal.png"
+              alt="Terminal emulator with command-line output and system operation logs"
               loading="lazy"
               decoding="async"
               width="736"
               height="418"
             />
-          </div>
+          </figure>
         </div>
       </section>
 
       <!-- Panels -->
-      <section class="contenedor" aria-labelledby="paneles-title">
+      <section class="contenedor" aria-labelledby="panels-title">
         <!-- Text -->
         <div class="container-text">
           <!-- Title -->
-          <h2 id="paneles-title">
+          <h2 id="panels-title">
             We want our team to love working here. We're always looking for
             talented developers who share our passion for frontend development.
           </h2>
@@ -370,11 +378,11 @@
         </div>
 
         <!-- Panel -->
-        <div class="panel">
+        <div class="container-panel">
           <!-- Img -->
           <img
-            src="img/computer.png"
-            alt="Oficina de Ableton con equipamiento retro y moderno"
+            src="img/loading.png"
+            alt="Web application loading spinner animation on a dark background"
             loading="lazy"
             decoding="async"
             width="564"
@@ -468,9 +476,7 @@
           <!-- Form -->
           <form class="newsletter" action="#" method="post">
             <!-- Label -->
-            <label for="email" class="visually-hidden"
-              >Email</label
-            >
+            <label for="email" class="visually-hidden">Email</label>
 
             <!-- Input -->
             <input
