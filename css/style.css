@@ -346,8 +346,6 @@
   }
 
   .there-image {
-    display: flex;
-    align-items: center;
     background-color: var(--color-green);
   }
 
@@ -549,6 +547,7 @@
     .there-image {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: var(--space-lg);
     }
 

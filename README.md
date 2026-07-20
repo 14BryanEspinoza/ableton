@@ -28,21 +28,21 @@ Página informativa ficticia que reproduce un estilo minimalista inspirado en Ab
 .
 ├── index.html           # Página principal (519 líneas)
 ├── css/
-│   └── style.css        # Estilos (659 líneas)
+│   └── style.css        # Estilos (677 líneas)
 ├── img/
-│   ├── 2027.png         # Calendario de escritorio
-│   ├── code.png         # Editor de código
-│   ├── developer.png    # Desarrollador en escritorio
+│   ├── cat.png          # Gato junto al setup de desarrollo
+│   ├── dev.png          # Desarrollador programando en laptop
+│   ├── developer.png    # Desarrollador frontend con vistas mobile/desktop
+│   ├── devs.png         # Equipo colaborando en code review
 │   ├── favicon.png      # Logo del sitio
-│   ├── github.png       # Perfil de GitHub
-│   ├── linux.png        # Terminal Linux
-│   ├── loading.png      # Spinner de carga
-│   ├── packman.png      # Videojuego Pac-Man
-│   ├── person.png       # Colaboración en equipo
+│   ├── linux.png        # Terminal Linux con operaciones del sistema
+│   ├── person.png       # Ingeniero en escritorio de pie
 │   ├── preview.png      # Vista previa
-│   ├── reset.png        # Teléfono con artículo
-│   ├── terminal.png     # Emulador de terminal
-│   └── wallpaper.png    # Imagen hero de fondo
+│   ├── red.png          # Workspace con iluminación roja
+│   ├── tech.png         # Espacio tech con herramientas de desarrollo
+│   ├── wallpaper.png    # Imagen hero de fondo
+│   ├── web.png          # Interfaz de aplicación web moderna
+│   └── web-developer.png # Web developer con editor de código
 └── README.md
 ```
 
