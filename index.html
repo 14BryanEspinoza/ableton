@@ -25,7 +25,7 @@
       property="og:description"
       content="Frontend practice project showcasing modern HTML, CSS, and responsive design skills."
     />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://github.com/14BryanEspinoza/ableton/blob/main/img/reset.png" />
     <meta
       property="og:url"
       content="https://14bryanespinoza.github.io/ableton/"
@@ -40,7 +40,7 @@
       name="twitter:description"
       content="Frontend practice project showcasing modern HTML, CSS, and responsive design skills."
     />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content="https://github.com/14BryanEspinoza/ableton/blob/main/img/reset.png" />
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +81,7 @@
       <!-- Navigation -->
       <nav class="header__list" aria-label="Principal">
         <!-- Links -->
-        <ul>
+        <ul role="list">
           <li><a href="#">Home</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">About</a></li>
@@ -92,7 +92,7 @@
         </ul>
 
         <!-- Account -->
-        <ul>
+        <ul role="list">
           <li><a href="#">Get Started</a></li>
           <li>
             <button class="btn">Account</button>
@@ -248,28 +248,30 @@
           </figure>
 
           <!-- Img -->
-          <figure class="container-image hide-mobile">
-            <img
-              src="img/packman.png"
-              alt="Retro Pac-Man arcade game with colorful maze and ghost characters"
-              loading="lazy"
-              decoding="async"
-              width="736"
-              height="418"
-            />
-          </figure>
+          <div class="container-image">
+            <figure class="hide-mobile">
+              <img
+                src="img/packman.png"
+                alt="Retro Pac-Man arcade game with colorful maze and ghost characters"
+                loading="lazy"
+                decoding="async"
+                width="736"
+                height="418"
+              />
+            </figure>
 
-          <!-- Img -->
-          <figure class="container-image hide-mobile">
-            <img
-              src="img/2027.png"
-              alt="Desk calendar open to the year 2027"
-              loading="lazy"
-              decoding="async"
-              width="564"
-              height="750"
-            />
-          </figure>
+            <!-- Img -->
+            <figure class="hide-mobile">
+              <img
+                src="img/2027.png"
+                alt="Desk calendar open to the year 2027"
+                loading="lazy"
+                decoding="async"
+                width="564"
+                height="750"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -498,7 +500,7 @@
       <div class="footer__bottom">
         <!-- Legal Links -->
         <nav class="footer__legal" aria-label="Legal links">
-          <ul>
+          <ul role="list">
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Press Resources</a></li>
             <li><a href="#">Legal Information</a></li>

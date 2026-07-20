@@ -76,7 +76,7 @@ No requiere instalación ni build. Abrir `index.html` directamente en el navegad
 
 ## Autor
 
-**Bryan Espinoza**
+> Bryan Espinoza
 
 - GitHub: [@14BryanEspinoza](https://github.com/14BryanEspinoza)
-- Correo: 14bryansaenz@gmail.com
+- Correo: <14bryansaenz@gmail.com>
