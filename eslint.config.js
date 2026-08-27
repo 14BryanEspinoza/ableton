@@ -14,6 +14,11 @@ export default [
   tailwind.configs.recommended,
 
   {
+    settings: {
+      tailwindcss: {
+        cssConfigPath: "src/styles/global.css",
+      },
+    },
     plugins: {
       tailwindcss: tailwind,
     },
