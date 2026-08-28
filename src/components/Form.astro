@@ -1,0 +1,49 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import Button from "@components/Button.astro";
+
+interface Props {
+  action: string;
+  method: string;
+  label: string;
+  type: HTMLAttributes<"input">["type"];
+  id: string;
+  placeholder: string;
+  required?: boolean;
+  autocomplete?: string;
+}
+
+const { action, method, label, type, id, placeholder, required, autocomplete } =
+  Astro.props as Props;
+const baseStyle = "w-full text-sm px-4 py-2 border border-border rounded-md";
+---
+
+<style>
+  .visually-hidden {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+  }
+</style>
+
+<form class="flex flex-col items-center gap-4" action={action} method={method}>
+  <label for={id} class="visually-hidden">{label}</label>
+
+  <input
+    type={type}
+    id={id}
+    name={id}
+    placeholder={placeholder}
+    required={required}
+    autocomplete={autocomplete}
+    class={baseStyle}
+  />
+
+  <Button label="Subscribe" className="w-full py-2" />
+</form>

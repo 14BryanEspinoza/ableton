@@ -1,0 +1,107 @@
+---
+import Form from "@components/Form.astro";
+import Button from "@components/Button.astro";
+import Link from "@components/Link.astro";
+import {
+  linkLegals,
+  linksCommunity,
+  linksEducation,
+  linksHome,
+} from "@data/links";
+---
+
+<footer class="border-t border-border px-4 py-8 md:px-8 lg:px-16">
+  <h2 class="text-lg font-bold">Ableton</h2>
+
+  <section
+    class="flex flex-col gap-6 pt-4 md:flex-row md:flex-wrap md:items-center lg:grid lg:grid-cols-3 lg:items-stretch lg:justify-items-start"
+  >
+    <ul class="flex flex-col gap-2 md:w-1/2 lg:w-auto">
+      {
+        linksHome.map((link) => (
+          <li>
+            <Link url={link.url} label={link.label} />
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex flex-col gap-4 md:flex-1 lg:flex-auto">
+      <h3 class="font-bold">Community</h3>
+
+      <ul class="flex flex-col gap-2">
+        {
+          linksCommunity.map((link) => (
+            <li>
+              <Link url={link.url} label={link.label} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-4 md:w-1/2 lg:w-auto">
+      <h3 class="font-bold">Education</h3>
+
+      <ul class="flex flex-col gap-2">
+        {
+          linksEducation.map((link) => (
+            <li>
+              <Link url={link.url} label={link.label} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-4 md:flex-1 lg:flex-auto">
+      <h3 class="font-bold">Language & Location</h3>
+
+      <Button label="Español (ES)" />
+      <Button label="English (US)" />
+    </div>
+
+    <div
+      class="flex flex-col gap-4 lg:col-start-3 lg:row-span-2 lg:row-start-1"
+    >
+      <h3 class="font-bold">Subscribe to our newsletter</h3>
+
+      <p class="text-justify text-sm">
+        Enter your email address to stay up to date with the latest offers,
+        tutorials, downloads, surveys and more.
+      </p>
+
+      <Form
+        action="#"
+        method="post"
+        label="Email"
+        type="email"
+        id="email"
+        placeholder="example@gmail.com"
+        required
+        autocomplete="email"
+      />
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-6 pt-6 md:pt-8 lg:pt-12">
+    <nav aria-label="Legal links">
+      <ul
+        class="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center md:gap-8"
+        role="list"
+      >
+        {
+          linkLegals.map((link) => (
+            <li>
+              <Link url={link.url} label={link.label} />
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <span class="text-center text-sm opacity-50"
+      >&copy; 14BryanEspinoza - 2026</span
+    >
+  </section>
+</footer>
