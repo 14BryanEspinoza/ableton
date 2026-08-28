@@ -1,19 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import Button from "@components/Button.astro";
-import favicon from "@assets/favicon.png";
+import { Image } from "astro:assets";
 import Link from "@components/Link.astro";
-
-const dataLinks = [
-  "Home",
-  "Projects",
-  "About",
-  "Services",
-  "Blog",
-  "Contact",
-  "More +",
-];
+import Button from "@components/Button.astro";
+import { linkNavbar } from "@data/links";
+import favicon from "@assets/favicon.png";
 ---
 
 <header
@@ -36,9 +27,13 @@ const dataLinks = [
   >
     <ul role="list" class="lg:flex lg:items-center lg:gap-4">
       {
-        dataLinks.map((dataLink) => (
+        linkNavbar.map((link) => (
           <li>
-            <Link url="#" label={dataLink} className="mt-4 block lg:mt-0" />
+            <Link
+              url={link.url}
+              label={link.label}
+              className="mt-4 block lg:mt-0"
+            />
           </li>
         ))
       }

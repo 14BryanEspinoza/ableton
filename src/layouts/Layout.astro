@@ -1,24 +1,21 @@
 ---
 import Link from "@components/Link.astro";
-import { metadata } from "../data/metadata.ts";
+import { metadata } from "@data/metadata";
 import "../styles/global.css";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- SEO -->
     <meta name="description" content={metadata.description} />
     <meta name="keywords" content={metadata.keywords} />
     <meta name="author" content={metadata.author} />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content={metadata.title} />
     <meta property="og:description" content={metadata.description} />
     <meta property="og:image" content={metadata.image} />
@@ -26,27 +23,19 @@ import "../styles/global.css";
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter Card  -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metadata.title} />
     <meta name="twitter:description" content={metadata.description} />
     <meta name="twitter:image" content={metadata.image} />
 
-    <!-- Canonical -->
     <link rel="canonical" href={metadata.canonical} />
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- Title -->
     <title>{metadata.title}</title>
   </head>
 
   <body>
-    <!-- Skip Link -->
     <Link url="#main-content" label="Skip to Main Content" skip />
 
-    <!-- Content -->
     <slot />
   </body>
 </html>
