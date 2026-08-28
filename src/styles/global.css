@@ -22,7 +22,16 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
+body {
+  font-family: var(--font-default);
+}
+
+:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid var(--color-primary);
+}
+
+/* @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
@@ -34,4 +43,4 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
+} */
