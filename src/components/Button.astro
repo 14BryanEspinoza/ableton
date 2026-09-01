@@ -1,0 +1,12 @@
+---
+interface Props {
+  label: string;
+  className?: string;
+}
+
+const { label, className } = Astro.props as Props;
+const baseStyle =
+  "cursor-pointer text-sm border border-border px-6 py-1 rounded-md transition-all hover:scale-105 hover:bg-primary hover:text-bg active:bg-accent active:text-bg";
+---
+
+<button class={`${baseStyle} ${className}`}>{label}</button>

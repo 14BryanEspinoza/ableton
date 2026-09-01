@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionProps } from "@data/collection.ts";
+import Link from "./Link.astro";
+
+const { title, description, image, labelledby, panelText, panelLink } =
+  Astro.props as CollectionProps;
+---
+
+<section class="px-6 pt-20 md:px-12" aria-labelledby=`${labelledby}-title`>
+  <div>
+    <h2 id=`${labelledby}-title` class="mb-8 text-justify font-bold">
+      {title}
+    </h2>
+
+    <p class="mb-16 text-justify">
+      {description}
+    </p>
+  </div>
+
+  <div
+    class={`flex max-w-3xl flex-col rounded-md md:flex-row md:items-center lg:mx-auto`}
+  >
+    {
+      image.map((img) => (
+        <figure
+          class:list={["mx-auto max-w-2xs", { "hide-mobile": img.hideMobile }]}
+        >
+          <Image
+            src={img.url}
+            alt={img.alt}
+            loading={"lazy"}
+            decoding={"async"}
+            class:list={["rounded-md"]}
+          />
+
+          <figcaption class="mt-8 text-center">{img.figCaption}</figcaption>
+        </figure>
+      ))
+    }
+
+    {
+      panelText && panelLink && (
+        <div class="mb-12 rounded-md bg-yellow p-8 shadow md:mb-0 lg:max-w-lg">
+          <h3 class="mb-4 text-justify text-sm font-bold">{panelText}</h3>
+
+          {panelLink.map((link) => (
+            <Link {...link} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import Link from "@components/Link.astro";
+import wallpaper from "../assets/wallpaper.png";
+---
+
+<section class="relative mb-4" aria-labelledby="home-title">
+  <div class="mt-2 flex gap-4 px-4 py-2 text-sm lg:px-8 lg:pt-4">
+    <Link url="#" label="About" className="font-bold text-accent" />
+    <Link url="#" label="Jobs" />
+  </div>
+
+  <h1
+    id="home-title"
+    class="absolute top-2/4 left-2/4 -translate-2/4 text-center text-3xl text-bg md:text-4xl lg:text-5xl"
+  >
+    Ableton
+  </h1>
+
+  <figure class="flex justify-center">
+    <Image
+      src={wallpaper}
+      alt="imagen del hero"
+      loading={"eager"}
+      decoding={"sync"}
+      class={"h-full w-full object-cover lg:w-277.5"}
+    />
+  </figure>
+</section>
