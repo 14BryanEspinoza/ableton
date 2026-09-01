@@ -6,7 +6,7 @@ interface Props {
   skip?: boolean;
 }
 
-const { url, label, className, skip = false } = Astro.props as Props;
+const { url, label, className = "", skip = false } = Astro.props as Props;
 const baseStyle =
   "text-sm hover:scale-105 hover:underline hover:text-primary transition-all";
 const skipStyle =

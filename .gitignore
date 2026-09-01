@@ -19,17 +19,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-Thumbs.db
 
 # jetbrains setting folder
 .idea/
 
-# Editor
-*.swp
-*.swo
-*~
-.vscode/
-
-# Backups
-*.backup
-*.bak
+# AI tooling (orchestrator skill registry, local only)
+.atl/

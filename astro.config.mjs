@@ -10,4 +10,8 @@ export default defineConfig({
   },
 
   integrations: [icon()],
+
+  site: "https://14bryanespinoza.github.io/ableton/",
+  base: "/ableton/",
+  build: { assets: "assets" },
 });
