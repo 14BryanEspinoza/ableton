@@ -26,6 +26,12 @@ body {
   font-family: var(--font-default);
 }
 
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
 :focus-visible {
   outline-offset: 2px;
   outline: 2px solid var(--color-primary);

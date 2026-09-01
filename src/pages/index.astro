@@ -2,11 +2,26 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@layouts/Header.astro";
 import Hero from "@layouts/Hero.astro";
+import Section from "@components/Section.astro";
+import {
+  create,
+  cleanCode,
+  panel,
+  pasion,
+  team,
+  creativity,
+} from "@data/collection";
 import Footer from "@layouts/Footer.astro";
 ---
 
 <Layout>
   <Header />
   <Hero />
+  <Section {...create} background="blue-light" />
+  <Section {...cleanCode} background="transparent" />
+  <Section {...team} background="green" />
+  <Section {...creativity} background="transparent" />
+  <Section {...pasion} background="blue-light" />
+  <Section {...panel} background="yellow" />
   <Footer />
 </Layout>
