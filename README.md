@@ -17,7 +17,9 @@
 - **Astro 7** — Static Site Generation (SSG), zero-JS por defecto
 - **Tailwind CSS v4** — Configuración CSS-first con `@theme` y design tokens
 - **astro-icon + Lucide** — Iconos SVG optimizados (tree-shaking automático)
-- **Sharp** — Optimización de imágenes en build (WebP, responsive)
+- **Sharp** — Optimización de imágenes en build (AVIF, WebP, responsive srcset/sizes)
+- **@astrojs/sitemap** — Generación automática de `sitemap.xml` + `robots.txt` para SEO
+- **Font optimization** — Preconnect, preload, non-blocking CSS load (`font-display: swap`)
 - **TypeScript strict** — Tipado completo en componentes y data
 - **ESLint + Prettier** — Linting y formato unificado (con plugins Astro/Tailwind)
 - **Husky + lint-staged** — Pre-commit hooks que evitan commits rotos
@@ -31,13 +33,15 @@
 src/
 ├── components/          # Componentes reutilizables (Button, Form, Link, Section)
 ├── data/                # Datos estructurados (collection, links, metadata)
+├── icons/               # Iconos SVG locales (vacío, listo para uso futuro)
 ├── layouts/             # Layouts de página (Layout, Header, Hero, Footer)
 ├── pages/               # Rutas (index.astro)
 ├── styles/              # Estilos globales + design tokens (global.css)
 └── assets/              # Imágenes optimizadas por Astro (favicon, hero, panels)
 public/
 ├── favicon.png          # Favicon servido en raíz (/favicon.png)
-└── preview.png          # Imagen Open Graph / Twitter Card
+├── preview.png          # Imagen Open Graph / Twitter Card
+└── robots.txt           # Robots.txt con referencia a sitemap
 ```
 
 ---
@@ -120,18 +124,36 @@ URL final: **<https://14bryanespinoza.github.io/ableton/>**
 
 ---
 
+## ⚡ Performance
+
+| Optimización | Implementación | Impacto |
+|-------------|---------------|---------|
+| **Imágenes AVIF + WebP** | `<Picture formats={['avif','webp']} layout="constrained" />` | -20-45% vs WebP solo |
+| **Responsive images** | `srcset` + `sizes` automático via `layout="constrained"` | Tamaño correcto por viewport |
+| **Hero priority** | `priority` prop (eager + sync + fetchpriority=high) | LCP optimizado |
+| **Lazy loading** | `loading="lazy"` + `decoding="async"` below-the-fold | Ahorro ancho de banda |
+| **Font preconnect** | `preconnect` a `fonts.googleapis.com` + `fonts.gstatic.com` | -100-200ms DNS/TLS |
+| **Font preload** | `preload` font regular 400 (más usada) | Descarga inmediata |
+| **Non-blocking CSS** | `media="print" onload="this.media='all'"` | Sin bloqueo render |
+| **Font weights reducidos** | 4 pesos (400,500,700 + italic 400) vs 18 originales | -78% requests fuente |
+| **Sitemap + robots** | `@astrojs/sitemap` auto-generado | Indexación completa |
+
+---
+
 ## 🔧 Stack técnico
 
-| Herramienta  | Versión | Uso                                     |
-| ------------ | ------- | --------------------------------------- |
-| Astro        | 7.x     | SSG, islas, optimización assets         |
-| Tailwind CSS | 4.x     | Utility-first, design tokens            |
-| TypeScript   | 5.x     | Tipado estricto                         |
-| ESLint       | 9.x     | Linting (plugin-astro, plugin-tailwind) |
-| Prettier     | 3.x     | Formato (plugin-astro, plugin-tailwind) |
-| Husky        | 9.x     | Git hooks                               |
-| lint-staged  | 17.x    | Lint/format solo en archivos staged     |
-| Sharp        | 0.35.x  | Transformación imágenes en build        |
+| Herramienta           | Versión | Uso                                              |
+| --------------------- | ------- | ------------------------------------------------ |
+| Astro                 | 7.x     | SSG, islas, optimización assets                  |
+| @astrojs/sitemap      | 3.x     | Generación sitemap.xml + robots.txt              |
+| Tailwind CSS          | 4.x     | Utility-first, design tokens                     |
+| TypeScript            | 5.x     | Tipado estricto                                  |
+| ESLint                | 9.x     | Linting (plugin-astro, plugin-tailwind)          |
+| Prettier              | 3.x     | Formato (plugin-astro, plugin-tailwind)          |
+| Husky                 | 9.x     | Git hooks                                        |
+| lint-staged           | 17.x    | Lint/format solo en archivos staged              |
+| Sharp                 | 0.35.x  | Transformación imágenes en build (AVIF, WebP)    |
+| astro-icon            | 1.x     | Iconos SVG (Iconify + locales)                   |
 
 ---
 
