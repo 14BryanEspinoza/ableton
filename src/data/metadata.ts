@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords: "Ableton, HTML Practice, CSS Practice, Frontend-Practice",
   author: "14BryanEspinoza",
   title: "Ableton UI - Frontend Practice",
-  image: "",
+  image:
+    "https://raw.githubusercontent.com/14BryanEspinoza/ableton/main/public/preview.png",
   canonical: "https://14bryanespinoza.github.io/ableton/",
 };
