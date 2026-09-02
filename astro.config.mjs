@@ -15,4 +15,15 @@ export default defineConfig({
   site: "https://14bryanespinoza.github.io/ableton/",
   base: "/ableton/",
   build: { assets: "assets" },
+
+  image: {
+    service: {
+      config: {
+        avif: { effort: 4, chromaSubsampling: "4:2:0" },
+        webp: { effort: 5 },
+        jpeg: { mozjpeg: true },
+        png: { compressionLevel: 9 },
+      },
+    },
+  },
 });
