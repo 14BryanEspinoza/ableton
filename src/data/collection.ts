@@ -101,7 +101,7 @@ export const pasion: CollectionProps = {
   image: [
     {
       url: cat,
-      alt: "Programación acogedora",
+      alt: "Logo de un gato gamer",
     },
     {
       url: linux,
