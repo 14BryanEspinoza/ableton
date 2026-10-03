@@ -25,7 +25,8 @@ export default [
     rules: {
       "no-console": "warn",
       "prefer-const": "error",
-      "no-unused-vars": [
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
         "warn",
         {
           argsIgnorePattern: "^_",
@@ -34,7 +35,10 @@ export default [
       ],
 
       "astro/no-set-html-directive": "error",
-      "tailwindcss/classnames-order": "warn",
+      // Class order is owned by prettier-plugin-tailwindcss. This rule does the
+      // same job in ESLint with a different order, and `eslint --fix` was undoing
+      // Prettier's output in lint-staged, leaving staged files unchanged.
+      "tailwindcss/classnames-order": "off",
       "tailwindcss/no-custom-classname": "off",
     },
   },

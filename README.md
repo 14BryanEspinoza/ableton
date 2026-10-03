@@ -1,49 +1,54 @@
 # Ableton UI — Frontend Practice
 
-![Deploy](https://github.com/14BryanEspinoza/ableton/actions/workflows/deploy.yml/badge.svg)
+[![Deploy](https://github.com/14BryanEspinoza/ableton/actions/workflows/deploy.yml/badge.svg)](https://github.com/14BryanEspinoza/ableton/actions/workflows/deploy.yml)
+[![CI](https://github.com/14BryanEspinoza/ableton/actions/workflows/ci.yml/badge.svg)](https://github.com/14BryanEspinoza/ableton/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> Recreación del challenge de **Ableton** de [Frontend Practice](https://www.frontendpractice.com/) migrado a **Astro 7** (SSG) con optimización de imágenes, Tailwind CSS v4 y despliegue automático a GitHub Pages.
+> Recreación del challenge **Ableton** de [Frontend Practice](https://www.frontendpractice.com/): sitio estático construido con **Astro 7** (SSG, cero JS por defecto), **Tailwind CSS v4** y despliegue automático a GitHub Pages.
 
 ![Preview](public/preview.png)
 
 ---
 
-## 🚀 Demo en vivo
+## 🌐 Demo en vivo
 
 **<https://14bryanespinoza.github.io/ableton/>**
 
 ---
 
-## ✨ Características
+## ✨ Qué incluye
 
-- **Astro 7** — Static Site Generation (SSG), zero-JS por defecto
-- **Tailwind CSS v4** — Configuración CSS-first con `@theme` y design tokens
-- **astro-icon + Lucide** — Iconos SVG optimizados (tree-shaking automático)
-- **Sharp** — Optimización de imágenes en build (AVIF, WebP, responsive srcset/sizes)
-- **@astrojs/sitemap** — Generación automática de `sitemap.xml` + `robots.txt` para SEO
-- **Font optimization** — Preconnect, preload, non-blocking CSS load (`font-display: swap`)
-- **TypeScript strict** — Tipado completo en componentes y data
-- **ESLint + Prettier** — Linting y formato unificado (con plugins Astro/Tailwind)
-- **Husky + lint-staged** — Pre-commit hooks que evitan commits rotos
-- **GitHub Pages via Actions** — Deploy automático en push a `main`
+- **Astro 7 (SSG)** — HTML estático, sin JavaScript en el cliente (0 `<script>` en el build).
+- **Tailwind CSS v4** — configuración CSS-first con `@theme` y design tokens en `src/styles/global.css`.
+- **Imágenes optimizadas** — `<Picture>` con `formats={["avif", "webp"]}`, `srcset`/`sizes` responsive y `layout="constrained"` vía Sharp en build.
+- **astro-icon + Lucide** — iconos SVG con tree-shaking.
+- **JetBrains Mono variable** — una sola petición de fuente (`wght@100..800`) con `preconnect` a Google Fonts.
+- **Sitemap + robots** — `@astrojs/sitemap` genera `sitemap-index.xml`, `robots.txt` apunta a él.
+- **Página 404** propia (`src/pages/404.astro`), generada en el build.
+- **TypeScript** — `astro check` con `typescript@5.7` sobre los 16 archivos de `src/`.
+- **ESLint 10 + Prettier** — plugins de Astro y Tailwind, con `--check` en CI.
+- **Husky + lint-staged** — formateo y lint en cada commit.
+- **CI + Deploy separados** — un workflow valida, otro publica.
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Estructura
 
 ```text
 src/
-├── components/          # Componentes reutilizables (Button, Form, Link, Section)
-├── data/                # Datos estructurados (collection, links, metadata)
-├── icons/               # Iconos SVG locales (vacío, listo para uso futuro)
-├── layouts/             # Layouts de página (Layout, Header, Hero, Footer)
-├── pages/               # Rutas (index.astro)
-├── styles/              # Estilos globales + design tokens (global.css)
-└── assets/              # Imágenes optimizadas por Astro (favicon, hero, panels)
+├── components/          # Button, Form, Link, Section
+├── data/                # collection.ts, links.ts, metadata.ts
+├── layouts/             # Layout, Header, Hero, Footer
+├── pages/               # index.astro, 404.astro
+├── styles/              # global.css (design tokens + reset de accesibilidad)
+└── assets/              # 11 imágenes procesadas por Astro en build
 public/
-├── favicon.png          # Favicon servido en raíz (/favicon.png)
-├── preview.png          # Imagen Open Graph / Twitter Card
-└── robots.txt           # Robots.txt con referencia a sitemap
+├── favicon.png          # favicon
+├── preview.png          # imagen Open Graph / Twitter Card
+└── robots.txt           # con referencia al sitemap
+.github/workflows/
+├── ci.yml               # lint + format:check + astro check
+└── deploy.yml           # build + deploy a GitHub Pages
 ```
 
 ---
@@ -51,114 +56,117 @@ public/
 ## 🛠️ Comandos
 
 ```bash
-# Instalar dependencias (pnpm)
-pnpm install
+pnpm install       # instalar dependencias
 
-# Desarrollo local (http://localhost:4321)
-pnpm dev
+pnpm dev           # desarrollo local (http://localhost:4321)
+pnpm build         # build de producción → dist/
+pnpm preview       # previsualizar el build
 
-# Build de producción (genera dist/)
-pnpm build
-
-# Preview del build local
-pnpm preview
-
-# Lint + formato
-pnpm lint
-pnpm format
+pnpm check         # astro check (TypeScript + Astro types)
+pnpm lint          # eslint .
+pnpm lint:fix      # eslint . --fix
+pnpm format        # prettier --write .
+pnpm format:check  # prettier --check .  (lo que corre CI)
 ```
 
-> **Node requerido:** ≥ 22.12 (configurado en `package.json` y workflow CI)
+> **Node ≥ 22.12** (declarado en `package.json` y usado en ambos workflows).
 
 ---
 
-## 🌐 Despliegue
+## 🧱 Componentes
 
-El sitio se publica automáticamente en **GitHub Pages** vía Actions al hacer push a `main`:
+| Componente      | Rol                                                                    |
+| --------------- | ---------------------------------------------------------------------- |
+| `Layout.astro`  | Shell HTML: metadata SEO, Open Graph, fuente, favicon, skip link, slot |
+| `Header.astro`  | Navbar sticky con menú mobile accesible (checkbox + `peer`, sin JS)    |
+| `Hero.astro`    | Sección hero con imagen `priority` y `aria-labelledby`                 |
+| `Section.astro` | Sección genérica reutilizable: título, texto y galería de imágenes     |
+| `Footer.astro`  | Links, formulario de newsletter y legales                              |
+| `Button.astro`  | Botón con `className` opcional                                         |
+| `Link.astro`    | Enlace con `className` opcional y variante `skip` para el skip link    |
+| `Form.astro`    | Input con label `visually-hidden` + botón de envío                     |
 
-1. **Job `build`** — `withastro/action@v6` (Node 22) → `pnpm install` + `pnpm build` → sube `dist/` como artifact
-2. **Job `deploy`** — `actions/deploy-pages@v4` → publica el artifact en el entorno `github-pages`
-
-URL final: **<https://14bryanespinoza.github.io/ableton/>**
-
-> La base path está configurada en `astro.config.mjs`:
->
-> ```js
-> site: "https://14bryanespinoza.github.io/ableton/",
-> base: "/ableton/",
-> build: { assets: "assets" }
-> ```
+Las secciones se componen desde `src/pages/index.astro` pasando objetos de `src/data/collection.ts` como props.
 
 ---
 
-## 🧱 Componentes principales
+## 📦 Datos (`src/data/`)
 
-| Componente           | Descripción                                          |
-| -------------------- | ---------------------------------------------------- |
-| `Layout.astro`       | Shell HTML, metadata, fuentes, favicon, slots        |
-| `Header.astro`       | Navbar responsive, logo (favicon), menú mobile       |
-| `Hero.astro`         | Sección hero con fondo optimizado + CTA              |
-| `Section.astro`      | Contenedor genérico de sección (2-col mobile-first)  |
-| `PanelSection.astro` | Panel lateral con imagen + texto + CTA               |
-| `Footer.astro`       | Footer con links, copyright, redes                   |
-| `Button.astro`       | Botón accesible (variant, size, asChild)             |
-| `Link.astro`         | Enlace polimórfico (`as` prop) con skip link         |
-| `Form.astro`         | Formulario newsletter (preparado para Astro Actions) |
-
----
-
-## 📦 Datos (src/data/)
-
-- **`metadata.ts`** — SEO, Open Graph, Twitter Card, canonical, preview image
-- **`links.ts`** — Enlaces de navegación, redes, CTA
-- **`collection.ts`** — Items de las secciones (panels, features) con imports de imágenes
+- **`collection.ts`** — tipado `CollectionProps` e items de cada sección, con imports de imágenes.
+- **`links.ts`** — navegación, footer y legales.
+- **`metadata.ts`** — título, descripción, canonical, OG y Twitter Card.
 
 ---
 
 ## ♿ Accesibilidad
 
-- Skip link en `Header` para navegación por teclado
-- Semántica HTML5 (`header`, `main`, `section`, `footer`, `nav`)
-- `alt` descriptivos en todas las imágenes
-- Contraste AA/AAA en tokens de color (Tailwind)
-- `prefers-reduced-motion` respetado (desactiva animaciones)
-- Focus visible en enlaces y botones
+- `<main id="main-content">` real: el **skip link** lleva a un destino existente.
+- Menú mobile navegable con **teclado**: el checkbox usa `sr-only` (enfocable) y el label tiene `peer-focus-visible` con anillo de foco visible.
+- Semántica HTML5: `header`, `main`, `section`, `footer`, `nav`, `figure`/`figcaption`.
+- `alt` descriptivos en las 11 imágenes, en el mismo idioma que el contenido (`lang="es"`).
+- Jerarquía de encabezados correcta: un `h1` → `h2` → `h3`.
+- `:focus-visible` global con outline de 2px.
+- `prefers-reduced-motion` desactiva animaciones y `scroll-behavior`.
+- Contraste AA verificado en los tokens de texto y en los estados de botón principales (`text-primary` sobre blanco = 8.6:1).
 
 ---
 
 ## ⚡ Performance
 
-| Optimización | Implementación | Impacto |
-|-------------|---------------|---------|
-| **Imágenes AVIF + WebP** | `<Picture formats={['avif','webp']} layout="constrained" />` | -20-45% vs WebP solo |
-| **Responsive images** | `srcset` + `sizes` automático via `layout="constrained"` | Tamaño correcto por viewport |
-| **Hero priority** | `priority` prop (eager + sync + fetchpriority=high) | LCP optimizado |
-| **Lazy loading** | `loading="lazy"` + `decoding="async"` below-the-fold | Ahorro ancho de banda |
-| **Font preconnect** | `preconnect` a `fonts.googleapis.com` + `fonts.gstatic.com` | -100-200ms DNS/TLS |
-| **Font preload** | `preload` font regular 400 (más usada) | Descarga inmediata |
-| **Non-blocking CSS** | `media="print" onload="this.media='all'"` | Sin bloqueo render |
-| **Font weights reducidos** | 4 pesos (400,500,700 + italic 400) vs 18 originales | -78% requests fuente |
-| **Sitemap + robots** | `@astrojs/sitemap` auto-generado | Indexación completa |
+| Optimización               | Implementación                                                     |
+| -------------------------- | ------------------------------------------------------------------ |
+| **AVIF + WebP responsive** | `<Picture formats={["avif","webp"]} layout="constrained">`         |
+| **`srcset` + `sizes`**     | 5 anchos por imagen (640 → 1200w), elegidos por el navegador       |
+| **LCP con prioridad**      | Hero con `priority` → `fetchpriority="high"` + `loading="eager"`   |
+| **Below-the-fold lazy**    | `loading="lazy"` + `decoding="async"` en las secciones             |
+| **Fuente en una petición** | `preconnect` ×2 + variable font `100..800` (1 request en vez de 4) |
+| **Cero JS en cliente**     | 0 `<script>` en el HTML final                                      |
+| **Sitemap + robots**       | Generados en build                                                 |
+| **Sharp en build**         | AVIF `effort: 4`, WebP `effort: 5`, PNG `compressionLevel: 9`      |
 
 ---
 
-## 🔧 Stack técnico
+## 🔧 Stack
 
-| Herramienta           | Versión | Uso                                              |
-| --------------------- | ------- | ------------------------------------------------ |
-| Astro                 | 7.x     | SSG, islas, optimización assets                  |
-| @astrojs/sitemap      | 3.x     | Generación sitemap.xml + robots.txt              |
-| Tailwind CSS          | 4.x     | Utility-first, design tokens                     |
-| TypeScript            | 5.x     | Tipado estricto                                  |
-| ESLint                | 9.x     | Linting (plugin-astro, plugin-tailwind)          |
-| Prettier              | 3.x     | Formato (plugin-astro, plugin-tailwind)          |
-| Husky                 | 9.x     | Git hooks                                        |
-| lint-staged           | 17.x    | Lint/format solo en archivos staged              |
-| Sharp                 | 0.35.x  | Transformación imágenes en build (AVIF, WebP)    |
-| astro-icon            | 1.x     | Iconos SVG (Iconify + locales)                   |
+| Herramienta         | Versión | Uso                                        |
+| ------------------- | ------- | ------------------------------------------ |
+| Astro               | 7.2.9   | SSG, optimización de assets                |
+| Tailwind CSS        | 4.3.3   | Utility-first + design tokens              |
+| TypeScript          | 5.7.3   | Tipado estricto (`astro check`)            |
+| ESLint              | 10.9.1  | Linting (plugin-astro, plugin-tailwindcss) |
+| Prettier            | 3.9.6   | Formato (plugin-astro, plugin-tailwindcss) |
+| @astrojs/check      | 0.9.10  | Diagnósticos de tipos Astro                |
+| @astrojs/sitemap    | 3.7.4   | sitemap-index.xml                          |
+| astro-icon          | 1.2.0   | Iconos SVG (Lucide)                        |
+| Sharp               | 0.35.4  | Transformación de imágenes en build        |
+| Husky / lint-staged | 9 / 17  | Git hooks                                  |
+
+---
+
+## 🔁 CI/CD
+
+**`ci.yml`** — en cada push y pull request:
+
+1. `pnpm install --frozen-lockfile`
+2. `pnpm run lint`
+3. `pnpm run format:check`
+4. `pnpm run check`
+
+**`deploy.yml`** — en push a `main`:
+
+1. `withastro/action@v6` (Node 22) → instala y buildea
+2. `actions/deploy-pages@v4` → publica `dist/` en el entorno `github-pages`
+
+La `base` está en `astro.config.mjs`:
+
+```js
+site: "https://14bryanespinoza.github.io/ableton/",
+base: "/ableton/",
+build: { assets: "assets" },
+```
 
 ---
 
 ## 📝 Licencia
 
-MIT — libre para uso personal y educativo.
+[MIT](LICENSE) — libre para uso personal y educativo.

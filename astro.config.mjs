@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
@@ -17,13 +17,11 @@ export default defineConfig({
   build: { assets: "assets" },
 
   image: {
-    service: {
-      config: {
-        avif: { effort: 4, chromaSubsampling: "4:2:0" },
-        webp: { effort: 5 },
-        jpeg: { mozjpeg: true },
-        png: { compressionLevel: 9 },
-      },
-    },
+    service: sharpImageService({
+      avif: { effort: 4, chromaSubsampling: "4:2:0" },
+      webp: { effort: 5 },
+      jpeg: { mozjpeg: true },
+      png: { compressionLevel: 9 },
+    }),
   },
 });

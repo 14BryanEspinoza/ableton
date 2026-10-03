@@ -25,15 +25,27 @@ body {
   font-family: var(--font-default);
 }
 
-@media (max-width: 767px) {
-  .hide-mobile {
-    display: none;
-  }
+.visually-hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
 }
 
 :focus-visible {
   outline-offset: 2px;
   outline: 2px solid var(--color-primary);
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

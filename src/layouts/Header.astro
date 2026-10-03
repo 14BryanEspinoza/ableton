@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Link from "@components/Link.astro";
 import Button from "@components/Button.astro";
 import { linkNavbar } from "@data/links";
@@ -8,17 +8,21 @@ import favicon from "@assets/favicon.png";
 ---
 
 <header
-  class="sticky top-0 z-10 flex flex-wrap items-center justify-between bg-bg p-4 shadow md:px-8"
+  class="bg-bg sticky top-0 z-10 mb-4 flex flex-wrap items-center justify-between p-4 shadow md:px-8"
 >
   <figure class="size-8">
-    <a href="/">
-      <Image src={favicon} alt="Logo de la pagina" loading="eager" />
+    <a href="/ableton/">
+      <Picture src={favicon} alt="Logo de la página" loading="eager" />
     </a>
   </figure>
 
-  <input type="checkbox" id="menu-toggle" class="peer hidden" />
-  <label for="menu-toggle" aria-label="Open menu">
-    <Icon name="lucide:menu" class="cursor-pointer text-3xl lg:hidden" />
+  <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+  <label
+    for="menu-toggle"
+    class="peer-focus-visible:ring-primary peer-focus-visible:ring-offset-bg rounded-md p-1 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 lg:hidden"
+    aria-label="Abrir menú"
+  >
+    <Icon name="lucide:menu" class="cursor-pointer text-3xl" />
   </label>
 
   <nav
@@ -41,13 +45,13 @@ import favicon from "@assets/favicon.png";
 
     <ul role="list" class="lg:flex lg:items-center lg:gap-4">
       <li>
-        <Link url="#" label="Get Started" />
+        <Link url="#" label="Empezar" />
       </li>
       <li>
-        <Button label="Account" className="mt-4 lg:mt-0" />
+        <Button label="Cuenta" className="mt-4 lg:mt-0" />
       </li>
       <li>
-        <Button label="Log out" className="mt-4 lg:mt-0" />
+        <Button label="Cerrar sesión" className="mt-4 lg:mt-0" />
       </li>
     </ul>
   </nav>
