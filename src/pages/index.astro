@@ -17,11 +17,13 @@ import Footer from "@layouts/Footer.astro";
 <Layout>
   <Header />
   <Hero />
-  <Section {...create} />
-  <Section {...cleanCode} />
-  <Section {...team} />
-  <Section {...creativity} />
-  <Section {...pasion} />
-  <Section {...panel} />
+  <main id="main-content">
+    <Section {...create} />
+    <Section {...cleanCode} />
+    <Section {...team} />
+    <Section {...creativity} />
+    <Section {...pasion} />
+    <Section {...panel} />
+  </main>
   <Footer />
 </Layout>
