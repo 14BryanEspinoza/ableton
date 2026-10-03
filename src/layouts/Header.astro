@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Link from "@components/Link.astro";
 import Button from "@components/Button.astro";
 import { linkNavbar } from "@data/links";
@@ -12,12 +12,12 @@ import favicon from "@assets/favicon.png";
 >
   <figure class="size-8">
     <a href="/">
-      <Image src={favicon} alt="Logo de la pagina" loading="eager" />
+      <Picture src={favicon} alt="Logo de la pagina" loading="eager" />
     </a>
   </figure>
 
-  <input type="checkbox" id="menu-toggle" class="peer hidden" />
-  <label for="menu-toggle" aria-label="Open menu">
+  <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+  <label for="menu-toggle" aria-label="Open menu" aria-expanded="false">
     <Icon name="lucide:menu" class="cursor-pointer text-3xl lg:hidden" />
   </label>
 
