@@ -29,18 +29,18 @@ export interface CollectionProps {
 export const create: CollectionProps = {
   labelledby: "create",
   title:
-    "We build with HTML5, CSS3, and JavaScript — the core technologies of the modern web. From semantic structure to fluid layouts and interactive experiences, every line of code is crafted with purpose.",
+    "Construimos con HTML5, CSS3 y JavaScript, las tecnologías fundamentales de la web moderna. Desde la estructura semántica hasta los diseños fluidos y las experiencias interactivas, cada línea de código está creada con un propósito.",
   description:
-    "Frontend development has come a long way since the early days of static pages. Today, it's the art of bringing designs to life — used by a global community of developers, designers, and creators who push the boundaries of what the web can do.",
+    "El desarrollo frontend ha recorrido un largo camino desde los primeros días de las páginas estáticas. Hoy en día, es el arte de dar vida a los diseños, utilizado por una comunidad global de desarrolladores, diseñadores y creadores que impulsan los límites de lo que la web puede hacer.",
   className: "twoImage",
   image: [
     {
       url: webDeveloper,
-      alt: "Web developer working",
+      alt: "Desarrollador web trabajando",
     },
     {
       url: tech,
-      alt: "Modern tech workspace",
+      alt: "Espacio de trabajo tecnológico moderno",
       hideMobile: true,
     },
   ],
@@ -49,15 +49,15 @@ export const create: CollectionProps = {
 export const cleanCode: CollectionProps = {
   labelledby: "clean-code",
   title:
-    "Writing clean, maintainable code isn't easy. It takes time, effort, and constant practice. But when everything clicks into place — when the layout snaps, the animation flows, and the Lighthouse score hits green — it's incredibly rewarding.",
+    "Escribir código limpio y mantenible no es fácil. Requiere tiempo, esfuerzo y práctica constante. Pero cuando todo encaja en su lugar —cuando la maquetación se ajusta, la animación fluye y la puntuación de Lighthouse se marca en verde— es increíblemente gratificante.",
   description:
-    "We feel the same way about building for the web. Our drive comes from a passion for the craft and for the people who use what we build. Whether mastering a new framework, optimizing Core Web Vitals, or perfecting a responsive layout, we're committed to growth.",
+    "Sentimos lo mismo al construir para la web. Nuestra motivación proviene de la pasión por este oficio y por las personas que usan lo que creamos. Ya sea dominando un nuevo framework, optimizando las Core Web Vitals o perfeccionando un diseño adaptativo, estamos comprometidos con el crecimiento.",
   className: "oneImage",
   image: [
     {
       url: developer,
-      alt: "Frontend developer",
-      figCaption: "Why Frontend? - A Developer's Journey",
+      alt: "Desarrollador frontend",
+      figCaption: "¿Por qué Frontend? - El viaje de un desarrollador",
     },
   ],
 };
@@ -65,18 +65,18 @@ export const cleanCode: CollectionProps = {
 export const team: CollectionProps = {
   labelledby: "team",
   title:
-    "We're a global community of developers, designers, and creatives from diverse backgrounds, united by our passion for building great web experiences.",
+    "Somos una comunidad global de desarrolladores, diseñadores y creativos de diversos orígenes, unidos por nuestra pasión por crear excelentes experiencias web.",
   description:
-    "Most of us started as self-taught learners — building small projects, breaking things, and gradually taking on bigger challenges. Some have computer science degrees, others come from design, music, or completely different fields. What unites us is the shared belief that every developer has something unique to contribute to the future of the web.",
+    "La mayoría de nosotros comenzó como autodidactas: construyendo pequeños proyectos, cometiendo errores y asumiendo gradualmente retos más grandes. Algunos tienen títulos en ciencias de la computación, otros provienen del diseño, la música o campos completamente diferentes. Lo que nos une es la convicción compartida de que cada desarrollador tiene algo único que aportar al futuro de la web.",
   className: "thereImage",
   image: [
     {
       url: red,
-      alt: "Modern development",
+      alt: "Desarrollo moderno",
     },
     {
       url: person,
-      alt: "Software engineer",
+      alt: "Ingeniero de software",
       hideMobile: true,
     },
   ],
@@ -85,14 +85,14 @@ export const team: CollectionProps = {
 export const creativity: CollectionProps = {
   labelledby: "creativity",
   title:
-    " We believe that creating truly exceptional web experiences requires dedication. We focus on the fundamentals — performance, accessibility, and usability — and strive for excellence in every project.",
+    "Creemos que crear experiencias web verdaderamente excepcionales requiere dedicación. Nos enfocamos en los fundamentos —rendimiento, accesibilidad y usabilidad— y nos esforzamos por alcanzar la excelencia en cada proyecto.",
   description:
-    "Instead of chasing every new framework or trend, we focus on what truly matters: writing maintainable code, designing inclusive interfaces, and building products that stand the test of time. We value diverse perspectives and encourage open discussion to find the best solutions.",
+    "En lugar de perseguir cada nuevo framework o tendencia, nos enfocamos en lo que realmente importa: escribir código mantenible, diseñar interfaces inclusivas y construir productos que perduren en el tiempo. Valoramos las diversas perspectivas y fomentamos el debate abierto para encontrar las mejores soluciones.",
   className: "oneImage",
   image: [
     {
       url: devs,
-      alt: "Team of developers",
+      alt: "Equipo de desarrolladores",
     },
   ],
 };
@@ -100,18 +100,18 @@ export const creativity: CollectionProps = {
 export const pasion: CollectionProps = {
   labelledby: "pasion",
   title:
-    "We're passionate about what we do, but also about becoming better versions of ourselves every day.",
+    "Nos apasiona lo que hacemos, pero también convertirnos en mejores versiones de nosotros mismos cada día.",
   description:
-    "We work hard to foster an environment where people can grow both personally and professionally. We believe in learning from each other and sharing knowledge freely. From internal workshops and code reviews to conference talks and open source contributions, we provide opportunities to explore new technologies, refine best practices, and push the boundaries of what's possible on the web.",
+    "Trabajamos arduamente para fomentar un entorno donde las personas puedan crecer tanto personal como profesionalmente. Creemos en aprender unos de otros y compartir conocimientos libremente. Desde talleres internos y revisiones de código hasta charlas en conferencias y contribuciones al código abierto, brindamos oportunidades para explorar nuevas tecnologías, perfeccionar las mejores prácticas y superar los límites de lo posible en la web.",
   className: "twoImage",
   image: [
     {
       url: cat,
-      alt: "Cozy coding",
+      alt: "Programación acogedora",
     },
     {
       url: linux,
-      alt: "Linux terminal",
+      alt: "Terminal de Linux",
       hideMobile: true,
     },
   ],
@@ -120,22 +120,22 @@ export const pasion: CollectionProps = {
 export const panel: CollectionProps = {
   labelledby: "panel",
   title:
-    "We want our team to love working here. We're always looking for talented developers who share our passion for the web and the craft of frontend development.",
+    "Queremos que a nuestro equipo le encante trabajar aquí. Siempre estamos buscando desarrolladores talentosos que compartan nuestra pasión por la web y el oficio del desarrollo frontend.",
   description:
-    "If you join us, you'll work on real-world projects that challenge and inspire you. We offer flexible hours, remote-friendly policies, and a collaborative environment where your voice matters. We also provide learning budgets, conference tickets, and mentorship to help you grow — whether you're mastering a new framework, contributing to open source, or diving into web accessibility.",
+    "Si te unes a nosotros, trabajarás en proyectos del mundo real que te desafiarán e inspirarán. Ofrecemos horarios flexibles, políticas de trabajo remoto y un entorno colaborativo donde tu opinión cuenta. También ofrecemos presupuestos para aprendizaje, entradas a conferencias y mentorías para ayudarte a crecer, ya sea dominando un nuevo framework, contribuyendo al código abierto o profundizando en la accesibilidad web.",
   className: "oneImage",
   image: [
     {
       url: web,
-      alt: "Cozy coding",
+      alt: "Programación acogedora",
     },
   ],
   panelText:
-    "We're proud of what we've built so far, but there's still so much more to do. If you want to be part of our journey, we'd love to hear from you.",
+    "Estamos orgullosos de lo que hemos construido hasta ahora, pero aún queda mucho por hacer. Si quieres ser parte de nuestro viaje, nos encantaría saber de ti.",
   panelLink: [
     {
       url: "#",
-      label: "See open position >",
+      label: "Ver vacantes disponibles >",
     },
   ],
 };
