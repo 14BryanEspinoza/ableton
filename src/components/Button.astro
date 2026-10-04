@@ -2,11 +2,13 @@
 interface Props {
   label: string;
   className?: string;
+  type?: "button" | "submit" | "reset";
 }
 
-const { label, className = "" } = Astro.props as Props;
 const baseStyle =
-  "cursor-pointer text-sm border border-border px-6 py-1 rounded-md transition-all hover:scale-105 hover:bg-primary hover:text-bg active:bg-accent active:text-bg";
+  "cursor-pointer px-6 py-2 rounded-md text-text text-sm border border-border transition hover:font-bold hover:scale-105 hover:text-bg hover:bg-primary active:text-text active:bg-blue-light";
+
+const { label, className = "", type = "button" } = Astro.props;
 ---
 
-<button class={`${baseStyle} ${className}`}>{label}</button>
+<button class={`${baseStyle} ${className}`} type={type}>{label}</button>
