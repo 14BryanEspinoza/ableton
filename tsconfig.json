@@ -5,10 +5,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@layouts/*": ["./src/layouts/*"],
-      "@components/*": ["./src/components/*"],
       "@assets/*": ["./src/assets/*"],
-      "@data/*": ["./src/data/*"]
+      "@components/*": ["./src/components/*"],
+      "@data/*": ["./src/data/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@metadata/*": ["./src/metadata/*"]
     }
   }
 }
