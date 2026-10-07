@@ -1,35 +1,23 @@
 ---
 import { Icon } from "astro-icon/components";
+
 import Layout from "@layouts/Layout.astro";
-import Header from "@layouts/Header.astro";
 import Footer from "@layouts/Footer.astro";
 ---
 
-<Layout>
-  <Header />
+<Layout title="Error 404">
   <main
     id="main-content"
     class="bg-bg flex min-h-[calc(100vh-160px)] items-center justify-center p-4 md:p-8"
   >
-    <div
-      class="group border-border bg-bg-secondary flex w-full max-w-2xl flex-col items-center rounded-xl border p-8 text-center shadow-xs sm:p-14"
+    <section
+      class="border-border bg-bg-secondary flex w-full max-w-2xl flex-col items-center rounded-md border p-8 text-center"
     >
-      <div class="relative my-6 flex w-full items-center justify-center py-6">
+      <div
+        class="relative z-10 my-6 flex w-full items-center justify-center py-6"
+      >
         <div
-          class="bg-accent absolute h-16 w-36 -translate-x-8 -translate-y-4 -rotate-6 rounded-xs opacity-90 transition-transform duration-300 ease-out group-hover:-translate-x-10 group-hover:-translate-y-6 group-hover:-rotate-12 sm:h-24 sm:w-56"
-          aria-hidden="true"
-        >
-        </div>
-
-        <div
-          class="bg-yellow absolute h-16 w-32 translate-x-10 translate-y-3 rotate-6 rounded-xs opacity-90 transition-transform duration-300 ease-out group-hover:translate-x-12 group-hover:translate-y-5 group-hover:rotate-12 sm:h-24 sm:w-48"
-          aria-hidden="true"
-        >
-        </div>
-
-        <div
-          class="bg-blue-light absolute h-16 w-28 -translate-x-2 translate-y-5 -rotate-3 rounded-xs opacity-90 transition-transform duration-300 ease-out group-hover:-translate-x-4 group-hover:translate-y-7 group-hover:-rotate-6 sm:h-24 sm:w-40"
-          aria-hidden="true"
+          class="bg-blue-light absolute h-24 w-40 -translate-x-2 translate-y-5 -rotate-3 rounded-xs opacity-90"
         >
         </div>
         <h1
@@ -40,26 +28,24 @@ import Footer from "@layouts/Footer.astro";
       </div>
 
       <div class="relative z-10 max-w-md">
-        <h2
-          class="text-text mb-3 text-2xl font-bold tracking-tight sm:text-3xl"
-        >
+        <h2 class="text-text mb-3 text-2xl font-bold tracking-tight">
           Página no encontrada
         </h2>
 
-        <p class="text-text-secondary mb-8 text-base leading-relaxed">
+        <p class="text-text-secondary mb-8 leading-relaxed">
           Lo sentimos, la página que buscas no existe, ha sido eliminada o
           cambió de dirección.
         </p>
 
         <a
           href="/ableton/"
-          class="bg-primary text-bg active:bg-accent inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold shadow-md transition-all hover:scale-105"
+          class="bg-primary text-bg active:bg-accent inline-flex items-center gap-2 rounded-md px-6 py-3 text-sm font-semibold shadow-md transition hover:scale-105"
         >
           <Icon name="lucide:home" class="size-5" />
           Volver al Inicio
         </a>
       </div>
-    </div>
+    </section>
   </main>
   <Footer />
 </Layout>
