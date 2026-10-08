@@ -1,28 +1,35 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import Link from "@components/Link.astro";
 import wallpaper from "../assets/wallpaper.png";
 ---
 
 <section class="relative mb-4" aria-labelledby="home-title">
-  <div class="mt-2 flex gap-4 px-4 py-2 text-sm lg:px-8 lg:pt-4">
+  <div class="mt-2 flex gap-6 px-4 py-2 text-sm lg:px-16 lg:pt-4">
     <Link url="#" label="Acerca de" className="text-primary font-bold" />
     <Link url="#" label="Empleos" />
   </div>
 
   <h1
     id="home-title"
-    class="text-bg absolute top-2/4 left-2/4 -translate-2/4 text-center text-3xl md:text-4xl lg:text-5xl"
+    class="text-bg absolute top-2/4 left-2/4 z-10 -translate-2/4 text-center text-3xl font-bold md:text-4xl lg:text-5xl"
   >
     Ableton
   </h1>
 
-  <figure class="flex justify-center">
-    <Image
+  <figure class="relative mx-auto max-w-7xl">
+    <Picture
       src={wallpaper}
       alt="Imagen principal de Ableton"
       priority
-      class="h-full w-full object-cover lg:w-277.5"
+      formats={["avif", "webp"]}
+      class="h-full w-full object-cover"
     />
+
+    <div
+      class="absolute inset-0 bg-linear-to-b from-black/0 via-black/60 to-black/0"
+      aria-hidden="true"
+    >
+    </div>
   </figure>
 </section>

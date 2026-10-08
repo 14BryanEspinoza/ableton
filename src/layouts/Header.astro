@@ -1,58 +1,102 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Picture } from "astro:assets";
-import Link from "@components/Link.astro";
+
 import Button from "@components/Button.astro";
+import Link from "@components/Link.astro";
 import { linkNavbar } from "@data/links";
-import favicon from "@assets/favicon.png";
 ---
 
 <header
-  class="bg-bg sticky top-0 z-10 mb-4 flex flex-wrap items-center justify-between p-4 shadow md:px-8"
+  class="bg-bg sticky top-0 z-20 mb-6 flex flex-wrap items-center justify-between px-8 py-4 shadow"
 >
-  <figure class="size-8">
-    <a href="/ableton/">
-      <Picture src={favicon} alt="Logo de la página" loading="eager" />
-    </a>
-  </figure>
+  <a href={import.meta.env.BASE_URL}>
+    <figure class="size-8">
+      <img
+        src={import.meta.env.BASE_URL + "favicon.png"}
+        alt="Ir al inicio"
+        loading="eager"
+        width="32"
+        height="32"
+        class="object-contain"
+      />
+    </figure>
+  </a>
 
-  <input type="checkbox" id="menu-toggle" class="peer sr-only" />
-  <label
-    for="menu-toggle"
-    class="peer-focus-visible:ring-primary peer-focus-visible:ring-offset-bg rounded-md p-1 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 lg:hidden"
-    aria-label="Abrir menú"
+  <button
+    type="button"
+    id="menu-toggle"
+    class="lg:hidden"
+    aria-expanded="false"
+    aria-controls="nav-main"
+    aria-label="menú de navegación"
   >
-    <Icon name="lucide:menu" class="cursor-pointer text-3xl" />
-  </label>
+    <Icon
+      name="lucide:menu"
+      class="cursor-pointer text-3xl"
+      aria-hidden="true"
+    />
+  </button>
 
   <nav
-    class="hidden h-[90dvh] w-full flex-col items-center justify-center gap-8 text-center peer-checked:flex lg:flex lg:h-auto lg:w-[95%] lg:flex-row lg:justify-between"
-    aria-label="Principal"
+    id="nav-main"
+    class="hidden h-[90dvh] w-full flex-col items-center justify-center gap-8 text-center md:h-[95dvh] lg:flex lg:h-auto lg:w-[95%] lg:flex-row lg:justify-between"
+    aria-label="Navegación principal"
   >
-    <ul role="list" class="lg:flex lg:items-center lg:gap-4">
+    <ul role="list" class="lg:flex lg:gap-6">
       {
         linkNavbar.map((link) => (
           <li>
             <Link
               url={link.url}
               label={link.label}
-              className="mt-4 block lg:mt-0"
+              className=" block mt-6 lg:mt-0"
             />
           </li>
         ))
       }
     </ul>
 
-    <ul role="list" class="lg:flex lg:items-center lg:gap-4">
+    <ul role="list" class="lg:flex lg:items-center lg:gap-6">
       <li>
         <Link url="#" label="Empezar" />
       </li>
       <li>
-        <Button label="Cuenta" className="mt-4 lg:mt-0" />
+        <Button label="Cuenta" className="mt-6 lg:mt-0" />
       </li>
       <li>
-        <Button label="Cerrar sesión" className="mt-4 lg:mt-0" />
+        <Button label="Cerrar sesión" className="mt-6 lg:mt-0" />
       </li>
     </ul>
   </nav>
 </header>
+
+<script>
+  const btn = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-main");
+
+  let open = false;
+
+  const setOpen = (next: boolean) => {
+    open = next;
+
+    btn?.setAttribute("aria-expanded", String(open));
+
+    nav?.classList.toggle("hidden", !open);
+    nav?.classList.toggle("flex", open);
+  };
+
+  btn?.addEventListener("click", () => setOpen(!open));
+
+  // Escape closes the menu and returns focus to the button that opened it (APG).
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && open) {
+      setOpen(false);
+      btn?.focus();
+    }
+  });
+
+  // Collapses the mobile menu after a link is followed so it never covers the target.
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+</script>

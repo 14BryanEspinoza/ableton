@@ -9,7 +9,7 @@ const { title, description, image, labelledby, panelText, panelLink } =
 
 <section class="px-6 pt-20 md:px-12" aria-labelledby=`${labelledby}-title`>
   <div class="lg:mx-auto lg:max-w-4xl">
-    <h2 id=`${labelledby}-title` class="mb-8 text-justify font-bold">
+    <h2 id=`${labelledby}-title` class="mb-8 font-bold">
       {title}
     </h2>
 
@@ -19,12 +19,15 @@ const { title, description, image, labelledby, panelText, panelLink } =
   </div>
 
   <div
-    class={`flex max-w-3xl flex-col rounded-md md:flex-row md:items-center lg:mx-auto`}
+    class={`flex flex-col items-center max-w-2xs mx-auto mb-8 rounded-md md:max-w-2xl md:flex-row`}
   >
     {
       image.map((img) => (
         <figure
-          class:list={["mx-auto max-w-2xs", { "hide-mobile": img.hideMobile }]}
+          class:list={[
+            "mx-auto max-w-2xs",
+            { "hidden lg:block": img.hideMobile },
+          ]}
         >
           <Picture
             src={img.url}
@@ -36,14 +39,16 @@ const { title, description, image, labelledby, panelText, panelLink } =
             class="rounded-md"
           />
 
-          <figcaption class="mt-8 text-center">{img.figCaption}</figcaption>
+          {img.figCaption && (
+            <figcaption class="mt-8 text-center">{img.figCaption}</figcaption>
+          )}
         </figure>
       ))
     }
 
     {
       panelText && panelLink && (
-        <div class="mx-8 mb-8 rounded-b-md p-4 shadow-md md:m-0 md:p-8">
+        <div class="rounded-b-md p-4 shadow-md md:p-8">
           <h3 class="mb-4 text-justify text-sm font-bold">{panelText}</h3>
 
           {panelLink.map((link) => (

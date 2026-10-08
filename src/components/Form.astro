@@ -13,13 +13,14 @@ interface Props {
   autocomplete?: string;
 }
 
+const baseStyle = "w-full text-sm px-4 py-2 border border-border rounded-md";
+
 const { action, method, label, type, id, placeholder, required, autocomplete } =
   Astro.props as Props;
-const baseStyle = "w-full text-sm px-4 py-2 border border-border rounded-md";
 ---
 
 <form class="flex flex-col items-center gap-4" action={action} method={method}>
-  <label for={id} class="visually-hidden">{label}</label>
+  <label for={id} class="sr-only">{label}</label>
 
   <input
     type={type}
