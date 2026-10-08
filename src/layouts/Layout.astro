@@ -1,6 +1,7 @@
 ---
+import Header from "@layouts/Header.astro";
 import Link from "@components/Link.astro";
-import { metadata } from "@data/metadata";
+import { metadata } from "@metadata/metadata";
 import "../styles/global.css";
 ---
 
@@ -42,6 +43,8 @@ import "../styles/global.css";
 
   <body>
     <Link url="#main-content" label="Saltar al contenido principal" skip />
+
+    <Header />
 
     <slot />
   </body>
