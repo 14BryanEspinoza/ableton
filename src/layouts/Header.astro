@@ -7,16 +7,16 @@ import { linkNavbar } from "@data/links";
 ---
 
 <header
-  class="bg-bg sticky top-0 z-50 mb-6 flex flex-wrap items-center justify-between px-8 py-4 shadow"
+  class="bg-bg sticky top-0 z-20 mb-6 flex flex-wrap items-center justify-between px-8 py-4 shadow"
 >
   <a href={import.meta.env.BASE_URL}>
     <figure class="size-8">
       <img
         src={import.meta.env.BASE_URL + "favicon.png"}
-        alt="Logo de Ableton"
+        alt="Ir al inicio"
         loading="eager"
-        width="40"
-        height="40"
+        width="32"
+        height="32"
         class="object-contain"
       />
     </figure>
@@ -28,7 +28,7 @@ import { linkNavbar } from "@data/links";
     class="lg:hidden"
     aria-expanded="false"
     aria-controls="nav-main"
-    aria-label="menu"
+    aria-label="menú de navegación"
   >
     <Icon
       name="lucide:menu"
@@ -58,7 +58,7 @@ import { linkNavbar } from "@data/links";
 
     <ul role="list" class="lg:flex lg:items-center lg:gap-6">
       <li>
-        <Link url="#empezar" label="Empezar" />
+        <Link url="#" label="Empezar" />
       </li>
       <li>
         <Button label="Cuenta" className="mt-6 lg:mt-0" />
