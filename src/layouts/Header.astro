@@ -40,7 +40,7 @@ import { linkNavbar } from "@data/links";
   <nav
     id="nav-main"
     class="hidden h-[90dvh] w-full flex-col items-center justify-center gap-8 text-center md:h-[95dvh] lg:flex lg:h-auto lg:w-[95%] lg:flex-row lg:justify-between"
-    aria-label="nav-main"
+    aria-label="Navegación principal"
   >
     <ul role="list" class="lg:flex lg:gap-6">
       {
@@ -76,12 +76,27 @@ import { linkNavbar } from "@data/links";
 
   let open = false;
 
-  btn?.addEventListener("click", () => {
-    open = !open;
+  const setOpen = (next: boolean) => {
+    open = next;
 
-    btn.setAttribute("aria-expanded", String(open));
+    btn?.setAttribute("aria-expanded", String(open));
 
     nav?.classList.toggle("hidden", !open);
     nav?.classList.toggle("flex", open);
+  };
+
+  btn?.addEventListener("click", () => setOpen(!open));
+
+  // Escape closes the menu and returns focus to the button that opened it (APG).
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && open) {
+      setOpen(false);
+      btn?.focus();
+    }
+  });
+
+  // Collapses the mobile menu after a link is followed so it never covers the target.
+  nav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
   });
 </script>
